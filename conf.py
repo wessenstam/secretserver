@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Nutanix Labs documentation build configuration file, created by
+# ThycoticCentrify Labs documentation build configuration file, created by
 # sphinx-quickstart on Fri Oct 27 12:18:41 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -50,9 +50,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Nutanix Tech Summit 2019'
-copyright = u'2018 Nutanix'
-author = u'Nutanix Global Technical Enablement'
+project = u'ThycoticCentrify Enablement'
+copyright = u'2021 ThycoticCentrify'
+author = u'ThycoticCentrify Technical Enablement'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -94,7 +94,7 @@ html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 # (Optional) Logo. Should be small enough to fit the navbar (ideally 24x24).
 # Path should be relative to the ``_static`` files directory.
 
-html_logo = "NutanixWorkshops.svg"
+html_logo = "ThycoticWorkshops.svg"
 
 html_favicon = "favicon.ico"
 
@@ -189,4 +189,3 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-#htmlhelp_basename = 'NutanixLabsdoc'

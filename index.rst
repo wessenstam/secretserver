@@ -2,74 +2,123 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Era Lab Setup
-   :name: _dbs
+   :caption: Module 1
+   :name: _m1
    :hidden:
 
-..   labsetup/labsetup
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Era with MSSQL
-   :name: _dbs
-   :hidden:
-
-   configure_mssql/configure_mssql
-   admin_mssqldb/admin_mssqldb
-   deploy_mssql_era/deploy_mssql_era
-   patch_sql/patch_sql
+   module1/module1
 
 .. toctree::
   :maxdepth: 2
-  :caption: Optional Labs
-  :name: _optional_labs
+  :caption: Module 2 - Basic Configuration
+  :name: _m2
   :hidden:
-
-  webtier/webtier
-  prismops_appmonitoring_lab/prismops_appmonitoring_lab
-  era_rest_api/era_rest_api
 
 
 .. toctree::
   :maxdepth: 2
-  :caption: Appendix
-  :name: _appendix
+  :caption: Module 3 - Users, Groups and Roles
+  :name: _m3
   :hidden:
 
-  appendix/glossary
-..  tools_vms/windows_tools_vm
-..  tools_vms/linux_tools_vm
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 4 - Folder and Policies
+  :name: _m4
+  :hidden:
+
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 5 - Secret Templates
+  :name: _m5
+  :hidden:
+
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 6 - Launchers
+  :name: _m6
+  :hidden:
+
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 7 - Remote Password Changers
+  :name: _m7
+  :hidden:
+
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 8 - Discovery
+  :name: _m8
+  :hidden:
+
+
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 9 - Auditing and Security
+  :name: _m9
+  :hidden:
 
 
 .. _getting_started:
 
----------------
-Getting Started
----------------
+----------------
+Before You Begin
+----------------
 
-Welcome to the Databases: Era with MSSQL bootcamp. This bootcamp is meant to provide you with first-hand experience to illustrate why Nutanix is an ideal platform for Database workloads.
+Purpose
+-------
 
-Historically, it has been a challenge to virtualize SQL Server because of the high cost of traditional virtualization stacks and the impact that a SAN-based architecture can have on performance. Businesses and their IT departments have constantly fought to balance cost, operational simplicity, and consistent predictable performance.
+This training and lab guide is designed to accompany a Thycotic trainer lead course. During your training course the trainer will regularly reference this guide as well as demonstrating lab exercises within a shared desktop environment and discussing common use cases and real-world scenarios.
 
-The Nutanix Enterprise Cloud removes many of these challenges and makes virtualizing a business-critical application such as SQL Server much easier. The Acropolis Distributed Storage Fabric (DSF) is a software-defined solution that provides all the features one typically expects in an enterprise SAN, without a SAN’s physical limitations and bottlenecks. SQL Server particularly benefits from the following DSF features:
+Your training pack
+------------------
 
-- Localized I/O and the use of flash for index and key database files to lower operation latency.
-- A highly distributed approach that can handle both random and sequential workloads.
-- The ability to add new nodes and scale the infrastructure without system downtime or performance impact.
-- Nutanix data protection and disaster recovery workflows that simplify backup operations and business continuity processes.
+Before you start this training course, ensure you have received lab details from your Thycotic trainer.
+The Secret Server lab consists of the following machines:
 
-In addition to solving common infrastructure problems for hosting business critical applications, Nutanix also seeks to address many of the key pain points associated with managing databases.
+.. list-table::
+   :widths: 15 15 15 55
+   :header-rows: 1
 
-.. figure:: images/4.png
+   * - Machine Name
+     - Internal Lab Name
+     - Internal IP
+     - Description
+   * - DC1
+     - DC1
+     - 172.31.32.10
+     - Domain Controller - contains all AD configuration used within the lab
+   * - SS
+     - SecretServer1
+     - 172.31.40.114
+     - This machine will be used to install and host Secret Server
+   * - WIN
+     - Client01
+     - 172.31.46.76
+     - Windows server, used to test a range of Secret Server functionalities during the training course
+   * - CENTOS
+     - 
+     - 172.31.38.35
+     - CentOS machine, used to test a range fo Secret Server functionalities during the training course
 
-Based on a 2018 IDC study of 500 North American companies with more than 1,000 employees, they estimate:
 
-- 77% of the organizations have more than 200 database instances in production
-- 82% have more than 10 copies of each database
-- 45%-60% the total storage capacity is dedicated to accommodating copy data
-- 32% of database clones require daily refreshes for analytics or dev/test
-- Copy data will cost IT organizations $55.63 billion in 2020
+You will need to initiate a remote desktop connection to the **PUBLIC IP** address of the Win machine. This IP address is dynamic and will change whenever the lab environment is restarted. The Win server machine serves as a jump box from which you can then RDP to the other windows machines by hostname. Lab Exercise 1 explains the process of identifying the IP address of your lab jump box and connecting to it.
 
-Maintaining the status quo leads to inefficient usage of both storage and worse, of administrator time. Meet Nutanix Era.
+To log into the Virtual Machines with administrative rights, the below information is providing you the credentials for Windows and Linux.
 
-.. figure:: images/5.png
+**Windows Domain Admin Account**
+
+| Username: **thylab\\adm-training**
+| Password: **Thycotic@2019!**
+
+**Centos SSH Account**
+
+| Username: **thycotic**
+| Password: **thycotest12$$**
+
+
