@@ -257,5 +257,5 @@ In the next module we will be protecting this encryption config file as part of 
 .. raw:: html
 
     <hr><CENTER>
-    <H2 color=#81bc00>This concludes this module</font>
+    <H2 style="color:#81bc00">This concludes this module</font>
     </CENTER>
