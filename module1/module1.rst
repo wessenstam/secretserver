@@ -164,9 +164,98 @@ In this exercise will access the Thycotic training lab environment.
 #. Navigate to the URL of the training lab environment provided by the Thycotic training team.
 #. Click the power on instances button, the virtual machines within the lab environment will now be powered on. They should be available in one to two minutes
 #. Select and copy in the IP address of the win machine as in the image below:
-
+   
+   .. figure:: images/000002.png
+   
 .. note::
     this IP address is dynamic and will change every time the lab environment is stopped and restarted.
       
-    
-      
+#. From the start menu on your host machine, type remote desktop connection and open the matching application
+#. In the remote desktop connection dialogue, past the IP address and click connect
+
+   .. figure:: images/000003.png
+
+#. When prompted with the windows security credentials dialogue, select More Choices then Use a different account
+#. Use the following credentials to connect, username: **thylab\\adm-training** / password: **Thycotic@2019!**
+#. If prompted with the following certificate warning, select **don’t ask me again** and click **Yes**
+
+   .. figure:: images/000004.png
+
+#. A remote desktop connection should now be initialized into the Thycotic training lab environment. From this machine you can now remote on to the other windows machines within the lab environment.
+
+Lab Exercise 2 – Installing Secret Server
+*****************************************
+
+In this exercise will power on and connect to the training lab environment before running through a complete installation of secret server.
+
+#. In Lab exercise one we connected to the windows server that acts as a jump host. Initiate a remote desktop connection to **SECRETSERVER1** using the same credentials from lab 1 (thylab\administrator / Thycotic@2019!)
+#. On the desktop of the secretserver1 machine you will see the secret server installer executable:
+
+   .. figure:: images/000005.png
+
+#. Run the setup file, when prompted with a windows User Account Control (UAC) dialogue click **Yes**
+#. The installer can install both Secret Server and Privilege Manager (Thycotic endpoint least privilege solution). In this case we only want to install Secret Server so uncheck the Privilege Manager radio button as in the image below:
+
+   .. figure:: images/000006.png
+
+#. Click **Next**
+#. Read and accept the license agreement
+#. On the SQL Server Database screen we can either install SQL server express or connect to an existing database. In the lab environment SQL Express is already installed so select **Connect to an existing SQL server** then click **Next**
+
+   .. figure:: images/000007.png
+
+#. The installer will now perform a range of checks to ensure pre-requisites are in place. In the lab environment all requirements should be in place, click **Next**
+
+   .. figure:: images/000008.png
+
+#. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **secretserver1\SQLEXPRESS** in the database name field, enter: **secretsserver**
+#. On the same screen we now need to configure the authentication option that will be used to connect to the database. Although we can use SQL authentication or Windows authentication here, Thycotic recommend using Windows authentication. Select the **Windows Authentication using service account** radio button and click **Next**
+
+   .. figure:: images/000009.png
+
+#. On the next screen we will be asked to configure the service account that will be used to connect to the SQL database and used to run the IIS application pools. Enter the following credentials:
+
+   - username: **thylab\\svc_secretserver**
+   - password: **Thycotic@2019!**
+
+#. To ensure the credentials are correct, click **Validate Credentials**, if they are you should see the word **success**. If not, check the credentials for any errors. Click Next
+#. On the next screen we need to create our initial Secret Server user. At this point you can create your own user or use the following information to create the initial user:
+   
+   - Username: ss_admin
+   - Display name: ss_admin
+   - Email: ss_admin@thylab.com
+   - Password: Thycotic@2019!
+   - Confirm Password Thycotic@2019!
+
+   .. note:: 
+    If you create your own user account at this point, ensure you remember the username and password. This account is used for the initial administration of Secret Server.
+
+#. Confirm you understand the importance of not loosing these credentials and click **Next**
+
+   .. figure:: images/000010.png
+
+#. On the next screen, options to configure an SMTP mail server are available. This feature will not be used during the training so click Skip Email
+#. Click **Next**
+#. The next screen provides a review of configured installation options and the option to modify any options if required. Click **Install**
+
+   .. figure:: images/000011.png
+
+Managing the Secret Server encryption key
+******************************************
+
+The Secret Server database is encrypted using a master encryption key. Each individual secret stored in the database is then encrypted with an intermediate key. When Secret Server is first installed the master encryption key is available in plain text and stored in the following location:
+
+.. code-block:: bash
+
+    C:\inetpub\wwwroot\SecretServer\encryption.conifg
+
+In the next module we will be protecting this encryption config file as part of the security hardening of Secret Server. At this point, Thycotic recommend taking a copy of this master encryption key and storing it in a physical vault for disaster recovery purposes. In a worst case scenario it is possible to recover the Secret Server database and all secrets with a valid database backup and the master encryption key. 
+
+.. danger:: 
+    Thycotic does not keep copies of customer encryption keys
+
+.. raw:: html
+
+    <hr><CENTER>
+    <H2 color=#81bc00>This concludes this module</font>
+    </CENTER>
