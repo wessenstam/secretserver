@@ -35,8 +35,7 @@ import sphinx_fontawesome
 extensions = ['sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinxcontrib.fulltoc',
-    'sphinx_fontawesome',
-    'rst2pdf.pdfbuilder']
+    'sphinx_fontawesome']
 
 pdf_documents = [('index', u'Sample doc Title', u'author name')]
 
