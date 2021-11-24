@@ -35,7 +35,10 @@ import sphinx_fontawesome
 extensions = ['sphinx.ext.todo',
     'sphinx.ext.ifconfig',
     'sphinxcontrib.fulltoc',
-    'sphinx_fontawesome']
+    'sphinx_fontawesome',
+    'rst2pdf.pdfbuilder']
+
+pdf_documents = [('index', u'Sample doc Title', u'author name')]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
