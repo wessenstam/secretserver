@@ -91,7 +91,7 @@ The Secret Server lab consists of the following machines:
      - Description
    * - DC1
      - DC1
-     - 172.31.32.10
+     - 172.31.32.10123
      - Domain Controller - contains all AD configuration used within the lab
    * - SS
      - SecretServer1
