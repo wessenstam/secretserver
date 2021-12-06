@@ -30,6 +30,7 @@
   :name: _m4
   :hidden:
 
+  module4/module4
 
 .. toctree::
   :maxdepth: 2

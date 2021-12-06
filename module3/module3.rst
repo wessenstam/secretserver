@@ -258,7 +258,6 @@ As a best practice, Thycotic recommends splitting the Administrator role out to 
    - Privilege Manager Windows Admin
    - Web Services impersonate
 
-
 #. Go to **Assign Roles**
 #. Now unassign the Administrator (Super User) role from the Secret Server Administrators AD group by clicking **Edit** and the single arrow pointing right after selecting the group.
 
