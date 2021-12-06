@@ -255,7 +255,7 @@ The Secret Server database is encrypted using a master encryption key. Each indi
 
     C:\inetpub\wwwroot\SecretServer\encryption.conifg
 
-In the next module we will be protecting this encryption config file as part of the security hardening of Secret Server. At this point, Thycotic recommend taking a copy of this master encryption key and storing it in a physical vault for disaster recovery purposes. In a worst case scenario it is possible to recover the Secret Server database and all secrets with a valid database backup and the master encryption key. 
+In the next module we will be protecting this encryption config file as part of the security hardening of Secret Server. At this point, Thycotic recommend taking a copy of this master encryption key and storing it in a physical vault for disaster recovery purposes. In a worst-case scenario it is possible to recover the Secret Server database and all secrets with a valid database backup and the master encryption key. 
 
 .. danger:: 
     Thycotic does not keep copies of customer encryption keys

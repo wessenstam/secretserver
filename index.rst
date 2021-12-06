@@ -131,3 +131,9 @@ Introduction
 ------------
 
 Your trainer will provide a slide-based introduction to Secret Server, the slide deck used will be shared. 
+
+.. raw:: html
+
+    <hr><CENTER>
+    <H2 style="color:#80BB01">This concludes this module</font>
+    </CENTER>
