@@ -50,21 +50,32 @@ The built-in remote desktop launcher allows the user to enter the hostname, full
 | As launchers are linked to a secret template, the first step is to create a new template to contain the launcher
 
 .. note:: 
-    This lab exercise should be performed from the client lab machine (AWS-WIN-CLIENT)
+    This lab exercise should be performed from the client lab machine (Client)
 
 #. Navigate to the **Admin > Secret Templates**
 #. Make sure **Active Directory Account** is selected in the drop-down
 #. Click **Edit**
 #. Select **Copy Secret Template**
 #. Name the new template: *Active Directory Account (Restricted Launch)*
+#. Click **Ok**
 #. Click **Continue**
+#. Create a new Field and use the following parameters:
+
+   - **FIELD NAME:** Allowed Servers
+   - **FIELD SLUG NAME:** allowed-servers (auto populated)
+   - **Description:** These servers are allowed to connect to
+   - **TYPE:** List (has to be list otherwise we can not select it for restriction)
+   - **IS REQUIRED:** Checked
+   - **SEARCHABLE:** Unchecked
+   - *Leave the rest default*
+   - Click the **+** sign to add the line
 
 Now we can configure a modified RDP launcher for the new template
 
-#. Select Configure Launcher
-#. Click Edit
+#. Click **Configure Launcher**
+#. Click **Edit**
 #. Leave all basic settings as they are
-#. Under Advanced Settings, check Restrict User Input
+#. Under **Advanced Settings**, check **Restrict User Input**
 #. Ensure the following settings are configured:
 
    - **Restrict as:** Allow List
