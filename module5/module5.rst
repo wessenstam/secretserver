@@ -94,3 +94,10 @@ We can now delete the first AD Sync secret from the Ss_admin personal folder
 #. Next to **Synchronization Secret**, click Clear to remove the secret we previously deleted (AD Sync (Deleted))
 #. Click **No Secret Selected** and select the new **AD Sync** secret in the *TSS Service Accounts* folder
 #. Click **Save and Validate** to complete
+
+
+.. raw:: html
+
+    <hr><CENTER>
+    <H2 style="color:#80BB01">This concludes this module</font>
+    </CENTER>
