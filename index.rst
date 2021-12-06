@@ -107,7 +107,7 @@ The Secret Server lab consists of the following machines:
      - SSPM
      - 172.31.32.114
      - This machine will be used to install and host Secret Server
-   * - WIN
+   * - Client
      - Client01
      - 172.31.32.118
      - Windows server, used to test a range of Secret Server functionalities during the training course
