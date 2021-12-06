@@ -136,7 +136,7 @@ The table below identifies ports and/or port ranges that may be required by Secr
       - 1521
     * - 
       - Kerberos
-      - 88
+      - 464
     * - Ports Incoming to Webserver
       - HTTP
       - 80
@@ -153,7 +153,11 @@ The table below identifies ports and/or port ranges that may be required by Secr
       - RADIUS
       - 1812
 
-* The RPC Dynamic Port ranges are a range of ports utilized by Microsoft’s Remote Procedure Call (RPC) functionality. This port range varies by operating system. For Windows Server 2008 or greater, this port range is 49152 to 65535 and this entire port range must be open for RPC technology to work. The RPC range is needed to perform Remote Password Changing since Secret Server will need to connect to the computer using DCOM protocol. To see your ipv4 dynamic range on a given machine, type netsh int ipv4 show dynamicport tcp in the commandline. To specify a specific port on your environment that Secret Server will communicate to, you can also `enable WMI ports on Windows client machines <https://thycotic.force.com/support/s/article/Enabling-WMI-ports-on-Windows-client-machines>`_.
+* The RPC Dynamic Port ranges are a range of ports utilized by Microsoft’s Remote Procedure Call (RPC) functionality. This port range varies by operating system. For Windows Server 2008 or greater, this port range is 49152 to 65535 and this entire port range must be open for RPC technology to work. The RPC range is needed to perform Remote Password Changing since Secret Server will need to connect to the computer using DCOM protocol. 
+
+| To see your ipv4 dynamic range on a given machine, type netsh int ipv4 show dynamicport tcp in the commandline. 
+
+| To specify a specific port on your environment that Secret Server will communicate to, you can also `enable WMI ports on Windows client machines <https://thycotic.force.com/support/s/article/Enabling-WMI-ports-on-Windows-client-machines>`_.
     
 
 Lab Exercise 1 – Connecting to the lab environment
@@ -161,84 +165,84 @@ Lab Exercise 1 – Connecting to the lab environment
 
 In this exercise will access the Thycotic training lab environment.
 
-#. Navigate to the URL of the training lab environment provided by the Thycotic training team.
-#. Click the power on instances button, the virtual machines within the lab environment will now be powered on. They should be available in one to two minutes
-#. Select and copy in the IP address of the win machine as in the image below:
+#. Navigate to the URL of the training lab environment provided by the Thycotic training team. 
+#. Enter the password: *Provided by the trainer*
+#. You will now see all VMs in the lab in a suspended state:
+
    
-   .. figure:: images/000002.png
+   .. figure:: images/lab-ss-001.png
    
-.. note::
-    this IP address is dynamic and will change every time the lab environment is stopped and restarted.
-      
-#. From the start menu on your host machine, type remote desktop connection and open the matching application
-#. In the remote desktop connection dialogue, past the IP address and click connect
+#. Click the power icon above the VMs to power them on, once powered on you can access each VM by clicking into the screen icon
 
-   .. figure:: images/000003.png
+   .. note:: 
+     The labs have a default keyboard layout of UK English, you might want to select a different keyboard language in the Skytap toolbar and in Windows. 
 
-#. When prompted with the windows security credentials dialogue, select More Choices then Use a different account
-#. Use the following credentials to connect, username: **thylab\\adm-training** / password: **Thycotic@2019!**
-#. If prompted with the following certificate warning, select **don’t ask me again** and click **Yes**
-
-   .. figure:: images/000004.png
-
-#. A remote desktop connection should now be initialized into the Thycotic training lab environment. From this machine you can now remote on to the other windows machines within the lab environment.
 
 Lab Exercise 2 – Installing Secret Server
 *****************************************
 
 In this exercise will power on and connect to the training lab environment before running through a complete installation of secret server.
 
-#. In Lab exercise one we connected to the windows server that acts as a jump host. Initiate a remote desktop connection to **SECRETSERVER1** using the same credentials from lab 1 (thylab\administrator / Thycotic@2019!)
+#. In Lab exercise one we connected to the windows server that acts as a jump host. Initiate a remote desktop connection to **SECRETSERVER1** using the same credentials from lab 1 (thylab\administrator / *Provided by the trainer*)
 #. On the desktop of the secretserver1 machine you will see the secret server installer executable:
 
-   .. figure:: images/000005.png
+   .. figure:: images/lab-ss-002.png
 
 #. Run the setup file, when prompted with a windows User Account Control (UAC) dialogue click **Yes**
 #. The installer can install both Secret Server and Privilege Manager (Thycotic endpoint least privilege solution). In this case we only want to install Secret Server so uncheck the Privilege Manager radio button as in the image below:
 
-   .. figure:: images/000006.png
+   .. figure:: images/lab-ss-003.png
 
 #. Click **Next**
-#. Read and accept the license agreement
 #. On the SQL Server Database screen we can either install SQL server express or connect to an existing database. In the lab environment SQL Express is already installed so select **Connect to an existing SQL server** then click **Next**
 
-   .. figure:: images/000007.png
+   .. figure:: images/lab-ss-004.png
 
 #. The installer will now perform a range of checks to ensure pre-requisites are in place. In the lab environment all requirements should be in place, click **Next**
 
-   .. figure:: images/000008.png
+   .. figure:: images/lab-ss-005.png
 
-#. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **secretserver1\SQLEXPRESS** in the database name field, enter: **secretsserver**
+   .. note::
+      The warning next to the HTTPS is due to a self-signed certificate and can be ignored in this lab environment. In real life installations, you want to make sure you have an official certificate 
+
+#. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\SQLEXPRESS** in the database name field, enter: **secretsserver**
 #. On the same screen we now need to configure the authentication option that will be used to connect to the database. Although we can use SQL authentication or Windows authentication here, Thycotic recommend using Windows authentication. Select the **Windows Authentication using service account** radio button and click **Next**
 
-   .. figure:: images/000009.png
+   .. figure:: images/lab-ss-006.png
 
 #. On the next screen we will be asked to configure the service account that will be used to connect to the SQL database and used to run the IIS application pools. Enter the following credentials:
 
    - username: **thylab\\svc_secretserver**
-   - password: **Thycotic@2019!**
+   - password: ***Provided by the trainer***
 
-#. To ensure the credentials are correct, click **Validate Credentials**, if they are you should see the word **success**. If not, check the credentials for any errors. Click Next
+#. To ensure the credentials are correct, click **Validate Credentials**, if they are you should see the word **Success**. If not, check the credentials for any errors. Click **Next**
+   
+   .. figure:: images/lab-ss-008.png
+
 #. On the next screen we need to create our initial Secret Server user. At this point you can create your own user or use the following information to create the initial user:
    
    - Username: ss_admin
    - Display name: ss_admin
    - Email: ss_admin@thylab.com
-   - Password: Thycotic@2019!
-   - Confirm Password Thycotic@2019!
+   - Password: *Provided by the trainer*
+   - Confirm Password *Provided by the trainer*
 
    .. note:: 
     If you create your own user account at this point, ensure you remember the username and password. This account is used for the initial administration of Secret Server.
 
 #. Confirm you understand the importance of not loosing these credentials and click **Next**
 
-   .. figure:: images/000010.png
+   .. figure:: images/lab-ss-010.png
 
-#. On the next screen, options to configure an SMTP mail server are available. This feature will not be used during the training so click Skip Email
-#. Click **Next**
+#. On the next screen, options to configure an SMTP mail server are available. This feature will not be used during the training so click **Skip Email**
+#. In the overview page, click **Next**
 #. The next screen provides a review of configured installation options and the option to modify any options if required. Click **Install**
 
-   .. figure:: images/000011.png
+   .. figure:: images/lab-ss-012.png
+
+#. The installation process may take up to 10 minutes. A great time to get something to drink...
+
+#. Once the installation is complete, you can now log in to Secret Server using the: https://sspm.thylab.local/secretserver URL.
 
 Managing the Secret Server encryption key
 ******************************************

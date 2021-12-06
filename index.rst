@@ -52,17 +52,22 @@
 
 .. toctree::
   :maxdepth: 2
-  :caption: Module 8 - Discovery
+  :caption: Module 8 - Secret Workflows
   :name: _m8
   :hidden:
 
 
 .. toctree::
   :maxdepth: 2
-  :caption: Module 9 - Auditing and Security
+  :caption: Module 9 - Discovery
   :name: _m9
   :hidden:
 
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 10 - Auditing and Security
+  :name: _m10
+  :hidden:
 
 .. _getting_started:
 
@@ -91,19 +96,19 @@ The Secret Server lab consists of the following machines:
      - Description
    * - DC1
      - DC1
-     - 172.31.32.10123
+     - 172.31.32.10
      - Domain Controller - contains all AD configuration used within the lab
-   * - SS
-     - SecretServer1
-     - 172.31.40.114
+   * - SSPM
+     - SSPM
+     - 172.31.32.114
      - This machine will be used to install and host Secret Server
    * - WIN
      - Client01
-     - 172.31.46.76
+     - 172.31.32.118
      - Windows server, used to test a range of Secret Server functionalities during the training course
    * - CENTOS
      - 
-     - 172.31.38.35
+     - 172.31.32.121
      - CentOS machine, used to test a range fo Secret Server functionalities during the training course
 
 
@@ -114,11 +119,15 @@ To log into the Virtual Machines with administrative rights, the below informati
 **Windows Domain Admin Account**
 
 | Username: **thylab\\adm-training**
-| Password: **Thycotic@2019!**
+| Password: **Provided by trainer**
 
 **Centos SSH Account**
 
 | Username: **thycotic**
-| Password: **thycotest12$$**
+| Password: **Provided by trainer**
 
 
+Introduction
+------------
+
+Your trainer will provide a slide-based introduction to Secret Server, the slide deck used will be shared. 
