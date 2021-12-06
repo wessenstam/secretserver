@@ -78,7 +78,7 @@ We can now delete the first AD Sync secret from the Ss_admin personal folder
 #. From the home screen, expand personal folders
 #. Select **ss_admin**
 #. Check the box next to the **AD Sync** secret 
-#. Click the trashcan icon to delete
+#. Click the trashcan icon to deactivate
 
    .. figure:: images/lab-ss-009.png
 
