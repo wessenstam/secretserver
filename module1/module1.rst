@@ -244,6 +244,8 @@ In this exercise will power on and connect to the training lab environment befor
 
 #. Once the installation is complete, you can now log in to Secret Server using the: https://sspm.thylab.local/secretserver URL.
 
+   .. figure:: images/lab-ss-013.png
+
 Managing the Secret Server encryption key
 ******************************************
 
