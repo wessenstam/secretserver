@@ -7,7 +7,7 @@ Basic Configuration
 Introduction
 ------------
 
-This first module will cover:
+This second module will cover:
 
 1. Installing and activation of Licenses
 2. Security hardening
@@ -144,17 +144,6 @@ In this exercise we will use DPAPI to protect the encryption.config file. For mo
 
    .. Note:: 
        Other, additional measures are recommended in securing the master encryption key used by Secret Server such as EFS encryption or offloading to a HSM. Please visit https://docs.thycotic.com/ss/10.9.0/security-hardening for more information. 
-
-
-
-
-
-
-
-
-
-
-
 
 
 .. raw:: html

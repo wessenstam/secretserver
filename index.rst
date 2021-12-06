@@ -38,6 +38,7 @@
   :name: _m5
   :hidden:
 
+  module5/module5
 
 .. toctree::
   :maxdepth: 2

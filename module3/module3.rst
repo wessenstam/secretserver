@@ -7,7 +7,7 @@ Users, Groups and Roles
 Introduction
 ------------
 
-This first module will cover:
+This third module will cover:
 
 1. Creating Secret Server Users
 2. Configure Active Directory Synchronisation
