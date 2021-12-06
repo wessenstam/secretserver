@@ -1,8 +1,8 @@
 .. _m1:
 
-------------------------------------
+------------------------
 Installing Secret Server
-------------------------------------
+------------------------
 
 Introduction
 ------------
@@ -160,7 +160,7 @@ The table below identifies ports and/or port ranges that may be required by Secr
 | To specify a specific port on your environment that Secret Server will communicate to, you can also `enable WMI ports on Windows client machines <https://thycotic.force.com/support/s/article/Enabling-WMI-ports-on-Windows-client-machines>`_.
     
 
-Lab Exercise 1 – Connecting to the lab environment
+Lab 1 – Connecting to the lab environment
 **************************************************
 
 In this exercise will access the Thycotic training lab environment.
@@ -178,7 +178,7 @@ In this exercise will access the Thycotic training lab environment.
      The labs have a default keyboard layout of UK English, you might want to select a different keyboard language in the Skytap toolbar and in Windows. 
 
 
-Lab Exercise 2 – Installing Secret Server
+Lab 2 – Installing Secret Server
 *****************************************
 
 In this exercise will power on and connect to the training lab environment before running through a complete installation of secret server.
@@ -245,6 +245,8 @@ In this exercise will power on and connect to the training lab environment befor
 #. Once the installation is complete, you can now log in to Secret Server using the: https://sspm.thylab.local/secretserver URL.
 
    .. figure:: images/lab-ss-013.png
+
+#. click **Close**
 
 Managing the Secret Server encryption key
 ******************************************

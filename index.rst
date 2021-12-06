@@ -14,6 +14,7 @@
   :name: _m2
   :hidden:
 
+  module2/module2
 
 .. toctree::
   :maxdepth: 2
