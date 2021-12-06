@@ -40,8 +40,58 @@ Out of the box, Secret Server provides the following launchers:
 In addition to these ‘out of the box’ launchers, custom launchers can be created to execute any process that can be executed from the command line. Secret Server can pass secret text fields such to seamlessly run applications with a range of command line arguments. 
 
 .. note:: 
-    Demo: Your trainer will now demonstrate a number of built in launchers and explain their functionality 
+    Your trainer will now demonstrate a number of built in launchers and explain their functionality 
 
+Lab 14 - Creating a 'restricted launch' RDP launcher
+****************************************************
+
+The built-in remote desktop launcher allows the user to enter the hostname, fully qualified domain name (FQDN) or IP address of a target machine they want to connect to. In some scenario’s users may not know this information or we may only want them to able to connect to a defined list of endpoints. In this scenario a modified RDP launcher can be created with a defined list of target endpoints.
+
+| As launchers are linked to a secret template, the first step is to create a new template to contain the launcher
+
+.. note:: 
+    This lab exercise should be performed from the client lab machine (AWS-WIN-CLIENT)
+
+#. Navigate to the **Admin > Secret Templates**
+#. Make sure **Active Directory Account** is selected in the drop-down
+#. Click **Edit**
+#. Select **Copy Secret Template**
+#. Name the new template: *Active Directory Account (Restricted Launch)*
+#. Click **Continue**
+
+Now we can configure a modified RDP launcher for the new template
+
+#. Select Configure Launcher
+#. Click Edit
+#. Leave all basic settings as they are
+#. Under Advanced Settings, check Restrict User Input
+#. Ensure the following settings are configured:
+
+   - **Restrict as:** Allow List
+   - **Restrict by Secret Field:** Notes
+   - **Include machines from dependencies:** Unchecked
+
+#. Click Save
+
+This configuration means that the user will be presented with a list of endpoints to connect to that will be held in the Notes field of the secret. To test the new template and launcher we will create a secret to launch from.
+
+#. From the Home screen expand the secret folder structure
+#. Navigate to IT > IT – Server Team
+#. Click the + icon next to Secrets to create a new secret in this folder
+#. The Create New Secret Dialogue appears
+#. Select Active Directory Account (Restricted Launch)
+#. Configure the secret with the following settings:
+
+   - **Name:** Server Team - Domain Admin
+   - **Domain:** Thylab
+   - **Username:** adm_serverteam1
+   - **Password:** Thycotic@2021!
+   - **Notes:** DC1, SSPM
+
+19.	Your configuration should match the image below:
+ 
+20.	Click Create Secret
+21.	To test our configuration, open the secret (note: Because of the Secret Policy configured earlier, this secret will require checkout and comment) and select the launcher.
 
 
 

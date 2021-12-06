@@ -46,6 +46,7 @@
   :name: _m6
   :hidden:
 
+  module6/module6
 
 .. toctree::
   :maxdepth: 2
