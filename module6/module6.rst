@@ -250,17 +250,6 @@ Lab 17 - Adding a custom launcher to a Secret template
 
 #. Click **Save**
 
-
-
-
-
-
-
-
-
-
-
-
 .. raw:: html
 
     <hr><CENTER>

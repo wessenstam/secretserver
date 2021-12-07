@@ -54,6 +54,7 @@
   :name: _m7
   :hidden:
 
+  module7/module7
 
 .. toctree::
   :maxdepth: 2
@@ -61,6 +62,7 @@
   :name: _m8
   :hidden:
 
+  module8/module8
 
 .. toctree::
   :maxdepth: 2
