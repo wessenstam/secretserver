@@ -70,6 +70,8 @@
   :name: _m9
   :hidden:
 
+  module9/module9
+
 .. toctree::
   :maxdepth: 2
   :caption: Module 10 - Auditing and Security
