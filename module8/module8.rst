@@ -155,24 +155,6 @@ Before enabling request for access, we will create an example secret. As with vi
 #. You now see the secret.
 #. As the Request is valid for one hour, you will not be prompted for the Request anymore till the time expires.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .. raw:: html
 
     <hr><CENTER>
