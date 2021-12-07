@@ -42,8 +42,8 @@ In addition to these ‘out of the box’ launchers, custom launchers can be cre
 .. note:: 
     Your trainer will now demonstrate a number of built in launchers and explain their functionality 
 
-Lab 14 - Creating a 'restricted launch' RDP launcher
-****************************************************
+Lab 14 - Creating a restricted RDP launcher
+*******************************************
 
 The built-in remote desktop launcher allows the user to enter the hostname, fully qualified domain name (FQDN) or IP address of a target machine they want to connect to. In some scenario’s users may not know this information or we may only want them to able to connect to a defined list of endpoints. In this scenario a modified RDP launcher can be created with a defined list of target endpoints.
 
