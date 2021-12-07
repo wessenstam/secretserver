@@ -78,6 +78,8 @@
   :name: _m10
   :hidden:
 
+  module10/module10
+  
 .. _getting_started:
 
 ----------------

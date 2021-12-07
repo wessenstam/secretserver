@@ -7,7 +7,7 @@ Remote Password Change (RPC)
 Introduction
 ------------
 
-This seventh will cover:
+This seventh module will cover:
 
 1. RPC Overview
 2. Auto change password using RPC

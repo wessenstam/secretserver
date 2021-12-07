@@ -7,7 +7,7 @@ Secret Workflows
 Introduction
 ------------
 
-This eighth will cover:
+This eighth module will cover:
 
 1. Checkout workflows
 2. Request for access workflows

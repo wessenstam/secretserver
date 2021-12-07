@@ -7,7 +7,7 @@ Launchers
 Introduction
 ------------
 
-This sixth will cover:
+This sixth module will cover:
 
 1. Launchers overview
 2. Creating launchers (ssh)

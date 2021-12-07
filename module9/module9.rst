@@ -7,7 +7,7 @@ Discovery
 Introduction
 ------------
 
-This nineth will cover:
+This nineth module will cover:
 
 1. Overview
 2. Enable Discovery

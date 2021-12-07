@@ -7,7 +7,7 @@ Secret Templates
 Introduction
 ------------
 
-This fifth will cover:
+This fifth module will cover:
 
 1. Discuss built-in Secret Templates
 2. Create a Secret Template
