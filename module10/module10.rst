@@ -113,7 +113,7 @@ In this exercise we will configure an event subscription that will alert specifi
 
    .. figure:: images/lab-ss-004.png
 
-#. To test the subscription, edit a secret in the *IT – Server Team* folder by adding to the *notes* section "Test to trigger teh Event Subscription". 
+#. To test the subscription, edit a secret in the *IT – Server Team* folder by adding to the *notes* section "Test to trigger the Event Subscription". 
 #. The event will be visible in the **Notification** of the ss_admin user. Click **Inbox** in the navigation bar and select **Notification**. There you will see event.
 
    .. figure:: images/lab-ss-005.png
@@ -164,7 +164,7 @@ Step Three: Add Filters
 #. Use the exact same method to Select the filter to the Event Pipeline. All filters present a popup page for you to provide additional information when you click on them. 
 #. Click the *+* in the green circle next to the **Secret Name** 
 
-   .. figure:: images/lab-ss-007.png
+   .. figure:: images/lab-ss-008.png
 
 #. Leave *Value Match type* as **Equals**
 #. In the *Value* box enter the name **RFA Example**
@@ -175,7 +175,7 @@ Step Four: Choose Tasks
 ^^^^^^^^^^^^^^^^^^^^^^^
 #. Use the exact same method to add Send Email to Owner task to the Event Pipeline. Many tasks present a popup page for you to provide additional information when you click on them.
 #. Set *Subject Pattern* to **This Secret has now Expired**
-#. Set *Email Body Pattern* to This Secret has now Expired**
+#. Set *Email Body Pattern* to **This Secret has now Expired**
 #. Leave the *High Priority* unchecked
 
    .. Warning:: 

@@ -69,8 +69,6 @@ Before enabling checkout, we will create an example secret. As with virtually al
    - **Password:** *Provided by Trainer*
    - **Domain:** Thylab (we are going to use the AD to authenticate the user. *Local* means a local user in Secret Server)
 
-   .. figure:: images/lab-ss-002.png
-
 #. Click **Log in**
 #. Navigate to **Secret > IT Team > IT – Server Team** folder and try to open the **Checkout Example** secret
 #. A screen will be shown that the secret is checked out and by whom. Account *STate* has the "power" to force the Check in.
