@@ -173,7 +173,7 @@ Step Three: Add Filters
 
 Step Four: Choose Tasks
 ^^^^^^^^^^^^^^^^^^^^^^^
-#. Use the exact same method to add Send Email to Owner task to the Event Pipeline. Many tasks present a popup page for you to provide additional information when you click on them.
+#. Use the exact same method to add **Send Email to Owners** task to the Event Pipeline. Many tasks present a popup page for you to provide additional information when you click on them.
 #. Set *Subject Pattern* to **This Secret has now Expired**
 #. Set *Email Body Pattern* to **This Secret has now Expired**
 #. Leave the *High Priority* unchecked
