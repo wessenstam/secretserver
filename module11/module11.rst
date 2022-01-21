@@ -179,6 +179,8 @@ Bring everything together
 
 Bringing all preparation together is the next step. Here the route will be added to the secret so the connection will use the jumpbox to connect the the apps-unix machine.
 
+.. figure:: images/lab-ss-022.png
+
 #. Navigate to **Secrets > IT Team > IT - Unix Team**
 #. Open the **Centos** secret
 #. Click the **Settings** tab

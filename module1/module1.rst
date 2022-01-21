@@ -177,6 +177,9 @@ In this exercise will access the Thycotic training lab environment.
    .. note:: 
      The labs have a default keyboard layout of UK English, you might want to select a different keyboard language in the Skytap toolbar and in Windows. 
 
+The environment looks like this
+
+.. figure:: images/lab-ss-01a.png
 
 Lab 2 – Installing Secret Server
 *****************************************
