@@ -42,7 +42,7 @@ Lab 3 - Installing Licenses
    .. figure:: images/lab-ss-003.png
 
 #. As we will be entering multiple license keys, select Bulk Entry Mode
-#. In the license field paste the five license keys provided by your Trainer, they should be in the following format
+#. In the license field paste the license keys provided by your Trainer, they should be in the following format
 
    .. figure:: images/lab-ss-002.png
 
@@ -104,8 +104,8 @@ Each item within the report represents a potential security concern that should 
 
 | It is important to understand that in many cases security must be balanced against user productivity. The first item in the security hardening report is a good example of this. Allow approval for access from email is a very convenient feature that allows users to approve or deny access to a secret by clicking a link in the request email. This obviously presents a security concern if the users email account is compromised. In many cases, features like this need to be considered based on the individual requirements of your organization. 
 
-Lab 5 – Protecting the encryption config
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Lab 5 – Protecting the encryption config and rotate the Master Key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As discussed in section 1.3 the master encryption key used to encrypt the Secret Server database is initially stored in plain text in the following location:
 
@@ -143,11 +143,56 @@ In this exercise we will use DPAPI to protect the encryption.config file. For mo
 
 
    .. Note:: 
-       Other, additional measures are recommended in securing the master encryption key used by Secret Server such as EFS encryption or offloading to a HSM. Please visit https://docs.thycotic.com/ss/10.9.0/security-hardening for more information. 
+       Other, additional measures are recommended in securing the master encryption key used by Secret Server such as EFS encryption or offloading to a HSM. Please visit https://docs.thycotic.com/ss/11.1.0/security-hardening for more information. 
+
+
+Rotating the master key is important in most scenarios. This feature, introduced in version 11.1.x, can be used to rotate the encryption key. 
+
+#. For the rotation to take place, the encryption.config file must be in a decrypted state. To do this, click **Back**
+#. Scroll down to the bottom of the page and click **Decrypt Key to not use DPAPI**
+
+   .. figure:: images/lab-01a.png
+
+#. In the screen that appears, type the password for the current user and click **Confirm**
+#. If the password was correct, you will see that the decrypt was successful
+
+   .. figure:: images/lab-02a.png
+
+#. Click **Back**
+#. Scroll down till you see the *MASTER ENCRYPTION KEY ROTATION* and click **Rotate Encryption Keys**
+
+   .. figure:: images/lab-03a.png
+
+#. Click the "I have read and understand...." and click **Continue**
+
+   .. figure:: images/lab-04a.png
+
+#. After that the UI will show *Pending - IIS Restart required to Continue*
+
+   .. figure:: images/lab-05a.png
+
+#. Open a Elevated CMD line and run
+
+   .. code-block:: bash
+
+      iisreset
+
+   .. figure:: images/lab-06a.png
+
+#. This will stop and start the IIS server.
+#. Refresh your browser after the command succeeded
+#. The UI wil eventually show that the Master Encryption Key Rotated is completed
+
+   .. figure:: images/lab-07a.png
+
+#. The master-encryption-key has been rotated to new values. 
+
+.. note::
+   More detailed information can be found here https://docs.thycotic.com/ss/11.1.0/security-hardening/master-encryption-key-rotation/index.md
 
 
 .. raw:: html
 
     <hr><CENTER>
-    <H2 style="color:#80BB01">This concludes this module</font>
+    <H2 style="color:#00FF59">This concludes this module</font>
     </CENTER>

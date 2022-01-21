@@ -80,6 +80,14 @@
 
   module10/module10
   
+.. toctree::
+  :maxdepth: 2
+  :caption: Module 11 - Jumpbox
+  :name: _m11
+  :hidden:
+
+  module11/module11
+
 .. _getting_started:
 
 ----------------
@@ -146,5 +154,5 @@ Your trainer will provide a slide-based introduction to Secret Server, the slide
 .. raw:: html
 
     <hr><CENTER>
-    <H2 style="color:#80BB01">This concludes this module</font>
+    <H2 style="color:#00FF59">This concludes this module</font>
     </CENTER>

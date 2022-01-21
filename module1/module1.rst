@@ -183,10 +183,10 @@ Lab 2 – Installing Secret Server
 
 In this exercise will power on and connect to the training lab environment before running through a complete installation of secret server.
 
-#. In Lab exercise one we connected to the windows server that acts as a jump host. Initiate a remote desktop connection to **SECRETSERVER1** using the same credentials from lab 1 (thylab\administrator / *Provided by the trainer*)
-#. On the desktop of the secretserver1 machine you will see the secret server installer executable:
+#. In Lab exercise one we connected to the windows server that acts as a jump host. Initiate a remote desktop connection to **SSPM** using the credentials thylab\\adm-training / *Provided by the trainer*
+#. On the desktop of the SSPM machine you will see the secret server installer executable:
 
-   .. figure:: images/lab-ss-002.png
+   .. figure:: images/lab-01a.png
 
 #. Run the setup file, when prompted with a windows User Account Control (UAC) dialogue click **Yes**
 #. The installer can install both Secret Server and Privilege Manager (Thycotic endpoint least privilege solution). In this case we only want to install Secret Server so uncheck the Privilege Manager radio button as in the image below:
@@ -205,7 +205,7 @@ In this exercise will power on and connect to the training lab environment befor
    .. note::
       The warning next to the HTTPS is due to a self-signed certificate and can be ignored in this lab environment. In real life installations, you want to make sure you have an official certificate 
 
-#. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\SQLEXPRESS** in the database name field, enter: **secretsserver**
+#. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\\SQLEXPRESS** in the database name field, enter: **secretsserver**
 #. On the same screen we now need to configure the authentication option that will be used to connect to the database. Although we can use SQL authentication or Windows authentication here, Thycotic recommend using Windows authentication. Select the **Windows Authentication using service account** radio button and click **Next**
 
    .. figure:: images/lab-ss-006.png
@@ -225,10 +225,10 @@ In this exercise will power on and connect to the training lab environment befor
    - Display name: ss_admin
    - Email: ss_admin@thylab.com
    - Password: *Provided by the trainer*
-   - Confirm Password *Provided by the trainer*
+   - Confirm Password: *Provided by the trainer*
 
-   .. note:: 
-    If you create your own user account at this point, ensure you remember the username and password. This account is used for the initial administration of Secret Server.
+   .. danger:: 
+    If you create your own user account at this point, ensure you remember the username and password. This account (ss_admin) is used for the initial administration of Secret Server.
 
 #. Confirm you understand the importance of not loosing these credentials and click **Next**
 
@@ -265,5 +265,5 @@ In the next module we will be protecting this encryption config file as part of 
 .. raw:: html
 
     <hr><CENTER>
-    <H2 style="color:#80BB01">This concludes this module</font>
+    <H2 style="color:#00FF59">This concludes this module</font>
     </CENTER>

@@ -199,5 +199,5 @@ Any new secrets created in the *IT – Server Team* folder will now have these s
 .. raw:: html
 
     <hr><CENTER>
-    <H2 style="color:#80BB01">This concludes this module</font>
+    <H2 style="color:#00FF59">This concludes this module</font>
     </CENTER>
