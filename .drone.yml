@@ -8,6 +8,7 @@ platform:
 steps:
 - name: create file
   commands:
-  - pwd
-  - ls -lAh
-  - echo foo > /tmp/foo.txt
+  - cd /home/t320569/github
+  - rm -Rf SecureServer
+  - git clone https://github.com/wessenstam/SecureServer
+  
