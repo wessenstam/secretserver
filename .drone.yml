@@ -10,4 +10,7 @@ steps:
   commands:
   - cd /home/t320569/github
   - if [ -d "SecureServer" ]; then git --git-dir=/home/t320569/github/SecureServer/.git pull; else git clone https://github.com/wessenstam/SecureServer/; fi
-  - chown -R t320569:admin /home/t320569/github/SecureServer
+  - chown -R t320569:admin /home/t320569/github/SecureServer  
+  when:
+    branch:
+    - main
