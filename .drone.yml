@@ -9,5 +9,6 @@ steps:
 - name: create file
   commands:
   - cd /home/t320569/github
-  - [ -d "SecureServer" ] && git --git-dir=/home/t320569/github/SecureServer/.git pull || git clone https://github.com/wessenstam/SecureServer/
+  - rm SecureServer -Rf
+  - git clone https://github.com/wessenstam/SecureServer
   - chown -R t320569:admin /home/t320569/github/SecureServer
