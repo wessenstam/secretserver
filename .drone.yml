@@ -1,11 +1,10 @@
 kind: pipeline
-type: docker
 name: default
-   
 steps:
-- name: test
-  image: alpine
+- name: create file
+  image: busybox
   commands:
-  - echo hello
-  - echo world
+  - pwd
+  - ls -lAh
+  - echo foo > foo.txt
   
