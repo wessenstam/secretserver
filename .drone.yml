@@ -7,4 +7,3 @@ steps:
   - pwd
   - ls -lAh
   - echo foo > foo.txt
-  
