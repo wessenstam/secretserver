@@ -1,10 +1,13 @@
 kind: pipeline
-name: default
 type: exec
+
 platform:
   os: linux
+
 node:
   runnner: vmdev
+
+name: default
 steps:
 - name: create file
   commands:
