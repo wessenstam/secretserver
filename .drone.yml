@@ -6,4 +6,4 @@ steps:
   commands:
   - pwd
   - ls -lAh
-  - echo foo > foo.txt
+  - echo foo > \temp\foo.txt
