@@ -151,6 +151,9 @@ Introduction
 
 Your trainer will provide a slide-based introduction to Secret Server, the slide deck used will be shared. 
 
+.. warning::
+  Do not upgrade your Secret Server installation. Doing so will lead into changes in the UI where the Lab guide will have different steps. The Lab guide has been build on version 11.0.x version of Secret Server. The update lab guide will be created asap...
+
 .. raw:: html
 
     <hr><CENTER>
