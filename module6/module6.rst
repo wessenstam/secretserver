@@ -53,36 +53,36 @@ The built-in remote desktop launcher allows the user to enter the hostname, full
     This lab exercise should be performed from the client lab machine (Client)
 
 #. Navigate to the **Admin > Secret Templates**
-#. Make sure **Active Directory Account** is selected in the drop-down
-#. Click **Edit**
-#. Select **Copy Secret Template**
-#. Name the new template: *Active Directory Account (Restricted Launch)*
-#. Click **Ok**
-#. Click **Continue**
-#. Create a new Field and use the following parameters:
+#. Click **Active Directory Account** 
+#. Click **Duplicate**
 
-   - **FIELD NAME:** Allowed Servers
-   - **FIELD SLUG NAME:** allowed-servers (auto populated)
+#. Name the new template: *Active Directory Account (Restricted Launch)*
+#. Click **Save**
+#. Click the **Fields** tab
+#. Create a new Field by clicking the **Add Field** button and use the following parameters:
+
+   - **Name:** Allowed Servers
+   - **Field Slug Name:** allowed-servers (auto populated)
    - **Description:** These servers are allowed to connect to
-   - **TYPE:** List (has to be list otherwise we can not select it for restriction)
-   - **IS REQUIRED:** Checked
-   - **SEARCHABLE:** Unchecked
-   - *Leave the rest default*
-   - Click the **+** sign to add the line
+   - **Data Type:** List (has to be list otherwise we can not select it for restriction)
+
+#. Click **Save**
 
 Now we can configure a modified RDP launcher for the new template
 
-#. Click **Configure Launcher**
-#. Click **Edit**
-#. Leave all basic settings as they are
-#. Under **Advanced Settings**, check **Restrict User Input**
+
+#. Click **Mapping** tab
+#. In the *Launchers* section, click **Edit** next to *Remote Desktop*
+#. Under *Launcher Restrictions*, check **Edit** and check **Rstrict User Input** this will show other options
 #. Ensure the following settings are configured:
 
    - **Restrict as:** Allowed Servers (from the dropdown box)
-   - **Include machines from dependencies:** Unchecked
    - **Deny List:** None
+   - **Include machines from dependencies:** Unchecked
 
 #. Click **Save**
+
+   .. figure:: images/lab-001.png
 
    .. note::
       This configuration means that the user will be presented with a list of endpoints to connect to that will be held in the Notes field of the secret. To test the new template and launcher we will create a secret to launch from.

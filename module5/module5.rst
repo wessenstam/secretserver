@@ -32,25 +32,23 @@ In this exercise we will be creating a Secret template that can be used for Acti
 | As, in this case the Secret Template we are creating is very similar to the existing Active Directory account template we will create a copy rather than starting from scratch.
 
 #. Navigate to the **Admin > Secret Templates** page
-#. Make sure **Active Directory Account** is selected in the template drop-down menu 
+#. Click **Active Directory Account**
+#. Click **Duplicate**
 #. Click **Edit**
-
-   .. figure:: images/lab-ss-002.png
-
-#. Click the **Copy Secret Template** button, 
 #. In the name new secret dialogue type: Active Directory Service Account
 
    .. figure:: images/lab-ss-004.png
 
-#. Click **OK** and **Continue**
-#. In the new template select **Configure Launcher**
+#. Click **Save**
+#. In the new template click the **Mapping** tab
 
-   .. figure:: images/lab-ss-005.png
+   .. figure:: images/lab-001.png
 
-#. Click **Delete** and accept the following warning prompt
+#. Click **Remove** next to the Launcher Name
 
-   .. figure:: images/lab-ss-007.png
- 
+   .. figure:: images/lab-002.png
+
+#. Click **Ok** and accept the following warning prompt
 We will now use this template to recreate the secret used Active Directory integration.
 
 #. Navigate to the **Home > Secret** screen
