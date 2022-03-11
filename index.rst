@@ -1,4 +1,4 @@
-.. title:: ThycoticCentrify - Secure Server Handson Training
+.. title:: Delinea - Secure Server Handson Training
 
 .. toctree::
    :maxdepth: 2
