@@ -33,7 +33,7 @@ Lab 3 - Installing Licenses
    .. note::
        The first time you open the UI, it will take some time as IIS needs to get stuff ready to be used.
 
-#. Click the **Admin** tab from the toolbar at the bottom-right of the screen then select **Licenses** 
+#. Click the **Admin** tab from the toolbar at the bottom-left of the screen then select **Licenses** 
 
    .. figure:: images/lab-ss-001.png
 
