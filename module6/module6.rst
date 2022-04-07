@@ -244,7 +244,6 @@ Lab 17 - Adding a custom launcher to a Secret template
 
 #. Navigate to **Admin > Secret Templates**
 #. Click the **Active Directory Account (Restricted Launch)** template 
-#. Click **Edit**.
 #. Click the **Mapping** tab, and then click **Add Mapping**.
 #. Select **Notepad** under the *Mapping Type > Launcher Types* section, and then map Domain, Password, and Username to the corresponding fields in the template. These will be used if you have chosen to run the Launcher as the Secret credentials.
 
