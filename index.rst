@@ -1,4 +1,4 @@
-.. title:: Delinea - Secure Server Handson Training
+.. title:: Delinea - Secret Server Handson Training
 
 .. toctree::
    :maxdepth: 2
@@ -97,12 +97,12 @@ Before You Begin
 Purpose
 -------
 
-This training and lab guide is designed to accompany a Thycotic trainer lead course. During your training course the trainer will regularly reference this guide as well as demonstrating lab exercises within a shared desktop environment and discussing common use cases and real-world scenarios.
+This training and lab guide is designed to accompany a Delinea trainer lead course. During your training course the trainer will regularly reference this guide as well as demonstrating lab exercises within a shared desktop environment and discussing common use cases and real-world scenarios.
 
 Your training pack
 ------------------
 
-Before you start this training course, ensure you have received lab details from your Thycotic trainer.
+Before you start this training course, ensure you have received lab details from your Delinea trainer.
 The Secret Server lab consists of the following machines:
 
 .. list-table::
@@ -151,7 +151,8 @@ Introduction
 
 Your trainer will provide a slide-based introduction to Secret Server, the slide deck used will be shared. 
 
-.. warning::
+.. 
+  .. warning::
   Do not upgrade your Secret Server installation. Doing so will lead into changes in the UI where the Lab guide will have different steps. The Lab guide has been build on version 11.0.x version of Secret Server. The update lab guide will be created asap...
 
 .. raw:: html

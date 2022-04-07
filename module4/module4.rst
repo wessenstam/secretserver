@@ -78,7 +78,7 @@ Lab 11 – Creating Secret Folders
 
 #. Click **Save**
 
-Repeat the above steps to create additional sub-folders: **IT – Server Team** and **IT – UNIX Team** and **IT – Database Team**. Ensure **only the relevant team** can view secrets. Your folder structure should match the image below:
+Repeat the above steps to create additional sub-folders: **IT – Server Team** and **IT – UNIX Team** and **IT – Database Team**. Ensure **only the relevant team** *AND* the **Secret Server Administrators** can view secrets. Your folder structure should match the image below:
 
    .. figure:: images/lab-ss-006.png
 

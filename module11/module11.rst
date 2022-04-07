@@ -54,8 +54,7 @@ One of the reasons why SSH/RDP Proxying is that it provides a higher level of se
 #. In the *Public Hostname or IP* type **172.31.32.114** (the ip address of the Secret Server)
 #. Click **Save**
 
-The Secret Server configuration is now ready to be used as a proxy server.
-
+The Secret Server configuration is now ready to be used as a proxy server.     
 
 Creation of secrets
 ^^^^^^^^^^^^^^^^^^^
@@ -97,7 +96,7 @@ Creation of secrets
 Preparation on the Linux machines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we have the secrets we need to make small changes to the Linux machines, so we can use the Public Key as authentication. THis is import for the Jumpbbox Route defined later. As interactive session is not what we want, as that would diminish the security, we are switching to SSH Key authentication. This is the securest way to remotely connect to Linux/Unix machines.
+Now that we have the secrets we need to make small changes to the Linux machines, so we can use the Public Key as authentication. This is import for the Jumpbox Route defined later. As interactive session is not what we want, as that would diminish the security, we are switching to SSH Key authentication. This is the securest way to remotely connect to Linux/Unix machines.
 
 #. On the last secret that has been created, launch the *PuTTY launcher*
 #. This will log you in using username and password. Due to the enablement of the SSH proxy, this connection will be made via the Secret Server SSH Proxy defined earlier. You can see that in the PuTTY screen that opened. There is a message **=== Welcome to the Secret Server SSH Proxy ===**
@@ -128,7 +127,7 @@ Now that we have the secrets we need to make small changes to the Linux machines
    .. figure:: images/lab-ss-011.png
 
 #. Logout of the PuTTY session using *<CTRL>+D*
-#. Close Notepad and PuTTY srceens
+#. Close Notepad and PuTTY screens
 #. Open the other secret (Jumpuser(Jumpbox))
 #. Repeat the above steps, but now for the centos.thylab.local server
 
@@ -143,6 +142,14 @@ Now that we have the secrets we need to make small changes to the Linux machines
    - Use <ESC> ``:wq!`` <ENTER> to save the file
    - Type ``chmod 400 autorized_keys`` to set the correct rights
    - Log out of the session using <CTRL>+D
+
+#. Add the jumpuser account on the centos VM by running the following commands
+
+   .. code-block:: bash
+
+      useradd -M jumpuser
+      echo -e 'Thycotic@2022!\nThycotic@2022!' | passwd jumpuser
+
 
 Prepare the Jumpbox Route
 ^^^^^^^^^^^^^^^^^^^^^^^^^

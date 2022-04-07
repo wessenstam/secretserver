@@ -23,7 +23,7 @@ Installing Licenses
 
 Before any additional licenses are installed the free version of Secret Server (standard addition) allows for the creation of one user and has many feature limitations. In a production environment, additional licenses must be purchased, installed and activated for effective usage. 
 
-| Secret server is licensed for both users and support, support licenses allow Secret Server to receive updates. The number of support licenses and user licenses must match in order to receive upgrades. Valid support licensing is required to receive any technical assistance from the Thycotic support team. 
+| Secret server is licensed for both users and support, support licenses allow Secret Server to receive updates. The number of support licenses and user licenses must match in order to receive upgrades. Valid support licensing is required to receive any technical assistance from the Delinea support team. 
 
 Lab 3 - Installing Licenses
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -53,7 +53,7 @@ Although adding these license keys has upgraded Secret Server from standard to p
 
 | Secret Server licenses are typically activated over a secure HTTPS connection but for environments with no internet access, an offline activation process is also available
 
-| During the activation the following information is sent to Thycotic:
+| During the activation the following information is sent to Delinea:
 
 - Name (user entered)
 - Phone Number (user entered)
@@ -68,7 +68,7 @@ Although adding these license keys has upgraded Secret Server from standard to p
 
   - This does not include any Secret data or the encryption.config file.
 
-- The data is gathered for the purpose of contact if there is a licensing issue and Thycotic will not sell or distribute the information provided during activation.  - The only information available to Thycotic staff is the contact information solely for the purposes of technical support and customer service.
+- The data is gathered for the purpose of contact if there is a licensing issue and Delinea will not sell or distribute the information provided during activation.  - The only information available to Delinea staff is the contact information solely for the purposes of technical support and customer service.
 
 
 Lab 4 - Activating Secret Server Licenses
@@ -114,19 +114,19 @@ As discussed in section 1.3 the master encryption key used to encrypt the Secret
     C:\inetpub\wwwroot\SecretServer\encryption.config
 
 
-Thycotic strongly recommend that steps are taken to protect this file to prevent unauthorized access to the Secret Server database or individual secrets. Typically, there are three ways this can be achieved
+Delinea strongly recommend that steps are taken to protect this file to prevent unauthorized access to the Secret Server database or individual secrets. Typically, there are three ways this can be achieved
 
 - Protecting the encryption.config file with DPAPI
 - Protecting the encryption.config file with EFS
 - Protecting the encryption.config file with an integrated HSM
 
-In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit https://docs.thycotic.com/ss/10.9.0/security-hardening
+In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit https://docs.thycotic.com/ss/11.1.0/security-hardening
 
 #. Ensure you are logged in to Secret Server with the account created during the installation (ss_admin / *Provided by trainer*)
 #. Open a file explorer window and navigate to **C:\\inetpub\\wwwroot\\SecretServer** and copy the **encryption.config** file to your desktop. 
 
    .. Note:: 
-       In a production environment Thycotic would recommend storing this in a physical vault or HSM
+       In a production environment Delinea would recommend storing this in a physical vault or HSM
 
 #. Navigate to the **Admin > Configuration** page 
 #. Select the security tab and scroll down to the bottom of the page and click the **Encrypt Key Using DPAPI** button

@@ -31,7 +31,7 @@ Lab 6 - Creating a local user
 *****************************
 
 #. Ensure you are logged in to Secret Server with the account created during the installation (ss_admin / *Provided by trainer*)
-#. Navigate to the **Admin > Users page**
+#. Navigate to the **Admin > User Management** page
 #. On the intro page, click **Continue**
 
    .. figure:: images/lab-ss-001.png
@@ -68,7 +68,7 @@ In this exercise will set up synchronization between secret server and an Active
    
    - Fully Qualified Domain Name: thylab.local
    - Friendly Name: Thylab
-   - Active:: Ticked
+   - Active: Ticked
    - Use LDAPS: No
 
 #. For the Synchronization Secret, we will need to create a new secret in secret server for the credentials of an account that has read access to Active Directory. Click **Create New Secret** on the right-hand side of the dialogue
@@ -114,7 +114,7 @@ To AD Synchronization to run on a schedule
 #. Change the **User Account Options** to **User Status Mirrors Active Directory** (this is the most commonly used option and means that whatever state a user is in within Active Directory (Enabled/Disabled) will be replicated in Secret Server)
 
    .. note:: 
-        At this point your trainer will explain Automatic user management or visit https://docs.thycotic.com/ss/10.9.0/directory-services/active-directory/understanding-ad-automatic-user-management/index.md for more information
+        At this point your trainer will explain Automatic user management or visit https://docs.thycotic.com/ss/11.1.0/directory-services/active-directory/understanding-ad-automatic-user-management/index.md for more information
  
  
 Groups
@@ -127,7 +127,7 @@ Within Secret Server groups are an important organizational container for user a
 Lab 8 – Creating a local group
 ******************************
 
-#. Navigate to the **Admin > Groups** page, you should see the four groups that were synced from Active Directory plus a default local group called Everyone
+#. Navigate to the **Admin > User Management > Groups** page, you should see the four groups that were synced from Active Directory plus a default local group called Everyone
 #. To create a new group, click the **Create Group** button on the right of the screen
 #. Set Group name to **Checkout Approvers**
 #. Ensure **Enabled** is checked and click **Create Group**
@@ -161,7 +161,7 @@ Roles can be applied to individual user accounts or to groups. As a best practic
 #. At this point, roles can be assigned by role (role is selected first then users added to the role) or by user or group (user or group is selected first then role added to the user or group). We will apply **By Role** 
 #. Ensure the **Administrator** role is selected in the drop-down role field
 #. Click **Edit**
-#. Find and select the **thylab\Secret Server Administrators**’ group
+#. Find and select the **thylab\\Secret Server Administrators**’ group
 #. Click the single left arrow button to move the group into the assigned field
 #. Your configuration should match the image below:
 
@@ -172,7 +172,7 @@ Roles can be applied to individual user accounts or to groups. As a best practic
 Lab 10 – Creating Custom Roles
 ******************************
 
-Out of the box, Secret Server provides a range of Roles that satisfy many common use cases. Thycotic does recommend that each customer creates custom roles based the needs of their organization
+Out of the box, Secret Server provides a range of Roles that satisfy many common use cases. Delinea does recommend that each customer creates custom roles based the needs of their organization
 
 | In this lab exercise we will explore a common scenario where more granular permission sets may be required.
 
@@ -184,7 +184,7 @@ Out of the box, Secret Server provides a range of Roles that satisfy many common
 - **Unlimited Administrator** – Users with this role permission receive unlimited secret access if unlimited administration mode is enabled
 - **View Configuration Unlimited Admin** – Users with this role permission can view the current administration mode configuration
 
-As a best practice, Thycotic recommends splitting the Administrator role out to ensure a least privilege approach
+As a best practice, Delinea recommends splitting the Administrator role out to ensure a least privilege approach
 
 .. list-table::
    :widths: 25 75

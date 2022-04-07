@@ -18,7 +18,7 @@ This tenth and last module will cover:
 
 Auditing and Security Overview
 ------------------------------
-In this module we will explore a range of auditing and security functionality within Secret Server. This area is of particular importance as most Thycotic Secret Server customers use this functionality to ensure they adhere to various internal and external compliance regulations. 
+In this module we will explore a range of auditing and security functionality within Secret Server. This area is of particular importance as most Delinea Secret Server customers use this functionality to ensure they adhere to various internal and external compliance regulations. 
 
 Secret Server Reporting 
 -----------------------
@@ -84,7 +84,7 @@ Event Subscriptions
 Secret Server can be configured to generate an Event Subscription or alert for virtually any action that is carried out within the system. This functionality means that whenever a particular action is performed, a defined list of users (or email distribution groups) can be notified automatically
 
 .. warning:: 
-    Thycotic recommends using Event Subscriptions sparingly, if users are bombarded with too many alerts they can quickly be perceived as spam and loose importance.
+    Delinea recommends using Event Subscriptions sparingly, if users are bombarded with too many alerts they can quickly be perceived as spam and loose importance.
 
 Lab 26 – Configuring an Event Subscription
 ******************************************

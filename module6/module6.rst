@@ -56,12 +56,12 @@ The built-in remote desktop launcher allows the user to enter the hostname, full
 #. Click **Active Directory Account** 
 #. Click **Duplicate**
 
-#. Name the new template: *Active Directory Account (Restricted Launch)*
+#. Name the new template: *Active Directory Account (Restricted Launch)* and check **Use List Field**
 #. Click **Save**
 #. Click the **Fields** tab
 #. Create a new Field by clicking the **Add Field** button and use the following parameters:
 
-   - **Name:** Allowed Servers
+   - **Name:** Allowed List
    - **Field Slug Name:** allowed-servers (auto populated)
    - **Description:** These servers are allowed to connect to
    - **Data Type:** List (has to be list otherwise we can not select it for restriction)
@@ -73,9 +73,10 @@ Now we can configure a modified RDP launcher for the new template
 
 #. Click **Mapping** tab
 #. In the *Launchers* section, click **Edit** next to *Remote Desktop*
-#. Under *Launcher Restrictions*, check **Edit** and check **Rstrict User Input** this will show other options
+#. Under *Launcher Restrictions*, check **Edit** and check **Restrict User Input** this will show other options
 #. Ensure the following settings are configured:
 
+   - **Use List Field:** Checked
    - **Restrict as:** Allowed Servers (from the dropdown box)
    - **Deny List:** None
    - **Include machines from dependencies:** Unchecked
@@ -139,7 +140,7 @@ Create a secret using the new Secrets Template
 #. Select **DC1** from the dropdown box (you will only see *DC1* or *SSPM*) and click **Launch Now**
    
    .. note::
-      If this is the first time the user has opened a Secret Server launcher they will prompted to download and install the Thycotic Protocol Handler:
+      If this is the first time the user has opened a Secret Server launcher they will prompted to download and install the Delinea Protocol Handler:
 
    .. figure:: images/lab-ss-003.png
 
@@ -217,7 +218,7 @@ Lab 16 – Creating a custom Launcher
 The first step to configuring remote password changing is to enable the feature in configuration:
 
 #. Navigate to **Admin > Secret Templates**
-#. Click **Configure Launchers** in the to of the screen, and then click **+New**.
+#. Click **Launchers** tab at the top of the screen, and then click **Create**.
 #. Select **Process** for the **Launcher Type**, and then type for the *Launcher Name* **Notepad** 
 #. Under the *WINDOWS SETTINGS*
 
@@ -242,9 +243,10 @@ Lab 17 - Adding a custom launcher to a Secret template
 ******************************************************
 
 #. Navigate to **Admin > Secret Templates**
-#. Select the **Active Directory Account (Restricted Launch)** template from the dropdown box, and then click **Edit**.
-#. Click the **Mappin** tab, and then click in the *Launchers* section **Edit**.
-#. Select **Notepad**, and then map Domain, Password, and Username to the corresponding fields in the template. These will be used if you have chosen to run the Launcher as the Secret credentials.
+#. Click the **Active Directory Account (Restricted Launch)** template 
+#. Click **Edit**.
+#. Click the **Mapping** tab, and then click **Add Mapping**.
+#. Select **Notepad** under the *Mapping Type > Launcher Types* section, and then map Domain, Password, and Username to the corresponding fields in the template. These will be used if you have chosen to run the Launcher as the Secret credentials.
 
    .. figure:: images/lab-ss-013.png
 

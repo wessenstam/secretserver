@@ -163,9 +163,9 @@ The table below identifies ports and/or port ranges that may be required by Secr
 Lab 1 – Connecting to the lab environment
 **************************************************
 
-In this exercise will access the Thycotic training lab environment.
+In this exercise will access the Delinea training lab environment.
 
-#. Navigate to the URL of the training lab environment provided by the Thycotic training team. 
+#. Navigate to the URL of the training lab environment provided by the Delinea training team. 
 #. Enter the password: *Provided by the trainer*
 #. You will now see all VMs in the lab in a suspended state:
 
@@ -192,7 +192,7 @@ In this exercise will power on and connect to the training lab environment befor
    .. figure:: images/lab-01a.png
 
 #. Run the setup file, when prompted with a windows User Account Control (UAC) dialogue click **Yes**
-#. The installer can install both Secret Server and Privilege Manager (Thycotic endpoint least privilege solution). In this case we only want to install Secret Server so uncheck the Privilege Manager radio button as in the image below:
+#. The installer can install both Secret Server and Privilege Manager (Delinea endpoint least privilege solution). In this case we only want to install Secret Server so uncheck the Privilege Manager radio button as in the image below:
 
    .. figure:: images/lab-ss-003.png
 
@@ -209,7 +209,7 @@ In this exercise will power on and connect to the training lab environment befor
       The warning next to the HTTPS is due to a self-signed certificate and can be ignored in this lab environment. In real life installations, you want to make sure you have an official certificate 
 
 #. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\\SQLEXPRESS** in the database name field, enter: **secretsserver**
-#. On the same screen we now need to configure the authentication option that will be used to connect to the database. Although we can use SQL authentication or Windows authentication here, Thycotic recommend using Windows authentication. Select the **Windows Authentication using service account** radio button and click **Next**
+#. On the same screen we now need to configure the authentication option that will be used to connect to the database. Although we can use SQL authentication or Windows authentication here, Delinea recommend using Windows authentication. Select the **Windows Authentication using service account** radio button and click **Next**
 
    .. figure:: images/lab-ss-006.png
 
@@ -258,12 +258,12 @@ The Secret Server database is encrypted using a master encryption key. Each indi
 
 .. code-block:: bash
 
-    C:\inetpub\wwwroot\SecretServer\encryption.conifg
+    C:\inetpub\wwwroot\SecretServer\encryption.config
 
-In the next module we will be protecting this encryption config file as part of the security hardening of Secret Server. At this point, Thycotic recommend taking a copy of this master encryption key and storing it in a physical vault for disaster recovery purposes. In a worst-case scenario it is possible to recover the Secret Server database and all secrets with a valid database backup and the master encryption key. 
+In the next module we will be protecting this encryption config file as part of the security hardening of Secret Server. At this point, Delinea recommend taking a copy of this master encryption key and storing it in a physical vault for disaster recovery purposes. In a worst-case scenario it is possible to recover the Secret Server database and all secrets with a valid database backup and the master encryption key. 
 
 .. danger:: 
-    Thycotic does not keep copies of customer encryption keys
+    Delinea does not keep copies of customer encryption keys
 
 .. raw:: html
 
