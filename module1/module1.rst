@@ -209,6 +209,10 @@ In this exercise will power on and connect to the training lab environment befor
       The warning next to the HTTPS is due to a self-signed certificate and can be ignored in this lab environment. In real life installations, you want to make sure you have an official certificate 
 
 #. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\\SQLEXPRESS** in the database name field, enter: **secretsserver**
+
+   .. note::
+     For security reasons, the database has already been created and the thylab\svc_secretserver had been give the appropriate rights to create the needed tables in the database. If you are using another name for the database, an error will be risen...
+
 #. On the same screen we now need to configure the authentication option that will be used to connect to the database. Although we can use SQL authentication or Windows authentication here, Delinea recommend using Windows authentication. Select the **Windows Authentication using service account** radio button and click **Next**
 
    .. figure:: images/lab-ss-006.png
