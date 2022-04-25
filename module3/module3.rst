@@ -172,7 +172,7 @@ Roles can be applied to individual user accounts or to groups. As a best practic
 Lab 10 – Creating Custom Roles
 ******************************
 
-Out of the box, Secret Server provides a range of Roles that satisfy many common use cases. Thycotic does recommend that each customer creates custom roles based the needs of their organization
+Out of the box, Secret Server provides a range of Roles that satisfy many common use cases. Delinea does recommend that each customer creates custom roles based the needs of their organization
 
 | In this lab exercise we will explore a common scenario where more granular permission sets may be required.
 
@@ -184,7 +184,7 @@ Out of the box, Secret Server provides a range of Roles that satisfy many common
 - **Unlimited Administrator** – Users with this role permission receive unlimited secret access if unlimited administration mode is enabled
 - **View Configuration Unlimited Admin** – Users with this role permission can view the current administration mode configuration
 
-As a best practice, Thycotic recommends splitting the Administrator role out to ensure a least privilege approach
+As a best practice, Delinea recommends splitting the Administrator role out to ensure a least privilege approach
 
 .. list-table::
    :widths: 25 75

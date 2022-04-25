@@ -97,12 +97,12 @@ Before You Begin
 Purpose
 -------
 
-This training and lab guide is designed to accompany a Thycotic trainer lead course. During your training course the trainer will regularly reference this guide as well as demonstrating lab exercises within a shared desktop environment and discussing common use cases and real-world scenarios.
+This training and lab guide is designed to accompany a Delinea trainer lead course. During your training course the trainer will regularly reference this guide as well as demonstrating lab exercises within a shared desktop environment and discussing common use cases and real-world scenarios.
 
 Your training pack
 ------------------
 
-Before you start this training course, ensure you have received lab details from your Thycotic trainer.
+Before you start this training course, ensure you have received lab details from your Delinea trainer.
 The Secret Server lab consists of the following machines:
 
 .. list-table::

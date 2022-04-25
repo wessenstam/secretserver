@@ -139,7 +139,7 @@ Create a secret using the new Secrets Template
 #. Select **DC1** from the dropdown box (you will only see *DC1* or *SSPM*) and click **Launch Now**
    
    .. note::
-      If this is the first time the user has opened a Secret Server launcher they will prompted to download and install the Thycotic Protocol Handler:
+      If this is the first time the user has opened a Secret Server launcher they will prompted to download and install the Delinea Protocol Handler:
 
    .. figure:: images/lab-ss-003.png
 
