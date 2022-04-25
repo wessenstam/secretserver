@@ -158,7 +158,9 @@ The table below identifies ports and/or port ranges that may be required by Secr
 | To see your ipv4 dynamic range on a given machine, type ``netsh int ipv4 show dynamicport tcp`` in the commandline. 
 
 | To specify a specific port on your environment that Secret Server will communicate to, you can also `enable WMI ports on Windows client machines <https://thycotic.force.com/support/s/article/Enabling-WMI-ports-on-Windows-client-machines>`_.
-    
+
+.. todo:: May have to recreate the beginning pictures as they are Thycotic branded!
+
 
 Lab 1 – Connecting to the lab environment
 **************************************************
@@ -185,7 +187,8 @@ Lab 2 – Installing Secret Server
 
 In this exercise you will power on and connect to the training lab environment before running through a complete installation of secret server.
 
-#. Initiate a connection to **SSPM** using the credentials **thylab\\adm-training** / *Provided by the trainer*
+#. Initiate a connection to **SSPM** by clicking the machine in the Lab environment
+#. Login using the credentials **thylab\\adm-training** / *Provided by the trainer*
 #. On the desktop of the SSPM machine you will see the secret server installer executable:
 
    .. figure:: images/lab-01a.png
@@ -202,7 +205,7 @@ In this exercise you will power on and connect to the training lab environment b
 
 #. The installer will now perform a range of checks to ensure pre-requisites are in place. In the lab environment all requirements should be in place, click **Next**
 
-   .. figure:: images/lab-ss-005.png
+   .. figure:: images/lab-A-001.png
 
    .. note::
       The warning next to the HTTPS is due to a self-signed certificate and can be ignored in this lab environment. In real life installations, you want to make sure you have an official certificate 
