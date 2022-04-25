@@ -155,7 +155,7 @@ The table below identifies ports and/or port ranges that may be required by Secr
 
 * The RPC Dynamic Port ranges are a range of ports utilized by Microsoft’s Remote Procedure Call (RPC) functionality. This port range varies by operating system. For Windows Server 2008 or greater, this port range is 49152 to 65535 and this entire port range must be open for RPC technology to work. The RPC range is needed to perform Remote Password Changing since Secret Server will need to connect to the computer using DCOM protocol. 
 
-| To see your ipv4 dynamic range on a given machine, type netsh int ipv4 show dynamicport tcp in the commandline. 
+| To see your ipv4 dynamic range on a given machine, type ``netsh int ipv4 show dynamicport tcp`` in the commandline. 
 
 | To specify a specific port on your environment that Secret Server will communicate to, you can also `enable WMI ports on Windows client machines <https://thycotic.force.com/support/s/article/Enabling-WMI-ports-on-Windows-client-machines>`_.
     
@@ -163,12 +163,11 @@ The table below identifies ports and/or port ranges that may be required by Secr
 Lab 1 – Connecting to the lab environment
 **************************************************
 
-In this exercise will access the Delinea training lab environment.
+In this exercise you will access the Delinea training lab environment.
 
-#. Navigate to the URL of the training lab environment provided by the Delinea training team. 
+#. Navigate to the URL of the training lab environment provided by the training team. 
 #. Enter the password: *Provided by the trainer*
 #. You will now see all VMs in the lab in a suspended state:
-
    
    .. figure:: images/lab-ss-001.png
    
@@ -184,9 +183,9 @@ The environment looks like this
 Lab 2 – Installing Secret Server
 *****************************************
 
-In this exercise will power on and connect to the training lab environment before running through a complete installation of secret server.
+In this exercise you will power on and connect to the training lab environment before running through a complete installation of secret server.
 
-#. In Lab exercise one we connected to the windows server that acts as a jump host. Initiate a remote desktop connection to **SSPM** using the credentials thylab\\adm-training / *Provided by the trainer*
+#. Initiate a connection to **SSPM** using the credentials **thylab\\adm-training** / *Provided by the trainer*
 #. On the desktop of the SSPM machine you will see the secret server installer executable:
 
    .. figure:: images/lab-01a.png
