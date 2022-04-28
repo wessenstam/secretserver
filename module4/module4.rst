@@ -28,59 +28,65 @@ Before starting to add Secrets into Secret Server, it is essential that that a w
 Lab 11 – Creating Secret Folders
 ********************************
 
-#. In the left hand column of the homepage, expand the **Secrets** tab under the *Personal Folders* only the **ss_admin** folder exists. 
+#. In the left hand column of the homepage, expand the **Secrets** by clicking on the double arrow button.
 
-   .. figure:: images/lab-ss-002.png
+   .. figure:: images/lab-A-001.png
 
-#. Right-Click the **Secrets** tab and click **Add Root** Folder
+#. Click the **+** icon in the top right corner and click **Add Root** Folder
+
+   .. figure:: images/lab-A-002.png
+
 #. Give the new folder a name of **TSS Service Accounts**
-#. Click **Create New** Folder
+#. Click **Create New Folder** button
 #. Right-Click the new folder and click **Edit Folder** 
-#. Click **Edit** next to *Folder Permissions* 
-#. Add the **Secret Server Administrators** group by finding the group in the *Edit* screen and give the group **View/View** permissions (default)
+#. Click the **Permissions** tab
+#. Click **Edit**
+#. Add the **Secret Server Administrators** group and give the group **View/View** permissions (default)
 
    .. figure:: images/lab-ss-003.png
 
 #. Click **Save**. 
-#. Right-Click the **Secrets** tab and click **Add Root** Folder
+#. Click **All Secrets** and click the **+** icon in the top right corner amd select **New Folder**
 #. Give the new folder a name of **IT Team**
-#. Click **Create New** Folder
+#. Click **Create New Folder**
 #. Right-Click the new folder and click **Edit Folder** 
+#. Click the *Permissions* tab
 #. Click **Edit** next to *Folder Permissions* and 
 
-   - **Inherit Permissions:** Unchecked
+   - **Inherit Permissions:** Unchecked (left next to the Edit button. as this is a root folder, it can't be changed)
    - Add the following groups with **View/View** rights
 
      - IT Database Team
      - IT Desktop Team
      - IT Server Team
      - IT Unix Team
-     - IT Secret Server Administrators
+     - Secret Server Administrators
 
 #. Click **Save**
 #. Right-Click the IT-Team Folder and click Add Sub Folder
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-004.png
 
 #. Create a new folder with the name: **IT – Desktop Team**
+#. Click **Create New Folder**
 #. Right-Click the new folder and click **Edit Folder** 
-#. Click **Edit** next to *Folder Permissions* and 
+#. Click the *Permissions* tab and click **Edit** and 
 
-   - **Inherit Permissions:** Unchecked
-   - Add the following groups with **View/View** rights
+   - **Inherit Permission**: unchecked
+   - Remove all but the following groups by hovering over the groupnames and clicking the Bin icon (remove) and give these groups **View/View** rights
 
-     - IT Database Team
      - IT Desktop Team
-#. Uncheck Inherit Permissions from Parent
-#. Remove permissions for *IT Database Team, IT Server Team, IT Unix Team groups*, your permission configuration should match the image below:
+     - Secret Server Administrators
 
-   .. figure:: images/lab-ss-005.png
+#. Your permission configuration should match the image below:
+
+   .. figure:: images/lab-A-005.png
 
 #. Click **Save**
 
 Repeat the above steps to create additional sub-folders: **IT – Server Team** and **IT – UNIX Team** and **IT – Database Team**. Ensure **only the relevant team** can view secrets. Your folder structure should match the image below:
 
-   .. figure:: images/lab-ss-006.png
+   .. figure:: images/lab-A-006.png
 
 
 Secret Policy
@@ -121,79 +127,70 @@ It is important to apply security settings to the secrets created or imported in
    * - Web Launcher requires Incognito Mode
      - If enabled, a Web Launcher can only be used if running in Incognito Mode. This way nothing will be cached.
 	
-You will notice that for each of the above settings, the following options are available (**Admin > Secret Policies > Create New**):
+..
+  You will notice that for each of the above settings, the following options are available (**Administration > Actions > Secret Policies > Add**):
 
-.. figure:: images/lab-ss-007.png
+  .. figure:: images/lab-ss-007.png
 
-- **Default** - Any items selected as 'Default' will be applied on the creation of any Secret that has this Secret Policy applied to it.
-- **Enforced** - Any items selected as 'Enforced' will be applied to all Secrets that have this Secret Policy applied to it.
+  - **Default** - Any items selected as 'Default' will be applied on the creation of any Secret that has this Secret Policy applied to it.
+  - **Enforced** - Any items selected as 'Enforced' will be applied to all Secrets that have this Secret Policy applied to it.
 
-.. note::
-    It is important to note that users with edit or owner permissions on a secret would be able to change settings if the applied policy setting is Default. Enforced settings cannot be changed on the Secret.
+  .. note::
+      It is important to note that users with edit or owner permissions on a secret would be able to change settings if the applied policy setting is Default. Enforced settings cannot be changed on the Secret.
 
 Lab 12 - Creating a Secret Policy
 *********************************
 
 In this exercise we will create a policy to define settings for secrets within the *IT - Server Team* folder	
 
-#. Navigate to the **Admin > Secret Policy** page
-#. Click **Create New**
+#. Navigate to **Administration > Actions > Secret Policies**
+#. Click **Add**
 #. Create the policy with the following configuration:
 
    - **Secret Policy Name:** IT Server Team – Domain Admin Policy
    - **Description:**  Defines secret security settings for secrets within the IT Server Team folder
    - **Active:** Checked
+
+#. Click **Save**
+#. Click the **Security** tab and click **Edit**
+
    - **Require Checkout:**   
      
-     - **Setting:** Default
-     - **Value:** Checked
+     - **Setting:** Yes
+     - **Default Only**: Checked
    
    - **Custom Checkout Interval:** 
    
-     - **Setting:** Default
      - **Value:** 120   
+     - **Default Only**: Checked
    
    - **Require Comment:** 
       
-     - **Setting:** Default 
-     - **Value:** Checked   
+     - **Setting:** Yes
+     - **Default Only**: Checked
    
    - *Leave all other options as default*
 
-#. Click **Save** 
+#. Click **Save** on the next Confirm screen, it will show how many Folder(s) and or Secret(s) will be updated click **OK**. As there is nothing to be updated, this should be done instantly
 #. The policy should look like this after the saving
 
-   .. figure:: images/lab-ss-010.png
+   .. figure:: images/lab-A-007.png
 
 Applying Policy to IT - Server team folder
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Right click the **IT – Server Team** folder and select **Edit Folder**
-#. In the **Folder Details** click **Edit** next to the Secret Policy text
+#. Click the **double arrow** next to *Secrets* to show the folders. Right-click **IT – Server Team** folder and select **Edit Folder**
+#. On the **Overview** tab click **Edit** next to the Secret Policy text
 #. In the Secret Policy drop down select the new **IT Server Team – Domain Admin Policy**
 
-   .. figure:: images/lab-ss-008.png
+   .. figure:: images/lab-A-008.png
 
 #. Click **Save**
 #. Your configuration should match the image below
 
-   .. figure:: images/lab-ss-009.png
+   .. figure:: images/lab-A-009.png
 
 Any new secrets created in the *IT – Server Team* folder will now have these security settings applied.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .. raw:: html
