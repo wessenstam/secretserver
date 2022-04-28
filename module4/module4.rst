@@ -43,7 +43,7 @@ Lab 11 – Creating Secret Folders
 #. Click **Edit**
 #. Add the **Secret Server Administrators** group and give the group **View/View** permissions (default)
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-003.png
 
 #. Click **Save**. 
 #. Click **All Secrets** and click the **+** icon in the top right corner amd select **New Folder**
