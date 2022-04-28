@@ -73,9 +73,9 @@ In this exercise will set up synchronization between secret server and an Active
 
 #. For the Synchronization Secret, we will need to create a new secret in secret server for the credentials of an account that has read access to Active Directory. Click **Create New Secret** on the right-hand side of the dialogue
 #. The new secret page should now be opened in a new tab, configure the new secret with the following information:
-#. Ensure secret template is set to Active Directory Account
+#. Ensure secret template is set to **Active Directory Account**
+#. Make sure the folder is set to **Personal Folders/ss_admin**
 #. Set Secret Name to **AD Sync**
-#. Set the folder to **Personal Folders/ss_admin**
 #. Set Domain to **Thylab**
 #. Set Username to **svc_sync**
 #. Set Password to *Provided by trainer*
@@ -104,7 +104,7 @@ In this exercise will set up synchronization between secret server and an Active
 To AD Synchronization to run on a schedule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Back in **Admin > Directory Services**, click the **Configuration** tab.
+#. Back in **Administration > Users, Roles, Access > Directory Services**, click the **Configuration** tab.
 #. The settings will match the following:
 
    .. figure:: images/lab-A-007.png
@@ -116,7 +116,8 @@ To AD Synchronization to run on a schedule
    .. note:: 
         At this point your trainer will explain Automatic user management or visit https://docs.delinea.com/ss/11.1.0/directory-services/active-directory/understanding-ad-automatic-user-management/index.md for more information
  
- 
+#. Click **Save**
+
 Groups
 ------
 
@@ -127,18 +128,18 @@ Within Secret Server groups are an important organizational container for user a
 Lab 8 – Creating a local group
 ******************************
 
-#. Navigate to the **Administration > Users, Roles, Access > User Management > Groups** tab, you should see the four groups that were synced from Active Directory plus a default local group called Everyone
+#. Navigate to the **Administration > Users, Roles, Access > User Management** and click the **Groups** tab, you should see the four groups that were synced from Active Directory plus a default local group called *Everyone*
 #. To create a new group, click the **Create Group** button on the right of the screen
 #. Set Group name to **Checkout Approvers**
 #. Ensure **Enabled** is checked and click **Create Group**
 #. Click the **Add** button on the **Members** tab
-#. Select **Barry Saunders**, **Hardeep Patel** and **Kim Morris**, click **Add** or drag and drop the names into the light ble bordered area to the left
+#. Select **Barry Saunders**, **Hardeep Patel** and **Kim Morris**, click right bottom **Add** or drag and drop the names into the light ble bordered area to the left
 
-   .. figure:: images/lab-A-009.png
+   .. figure:: images/lab-A-008.png
 
 #. Your group should now match the image below. This group will be used in later lab exercises
 
-   .. figure:: images/lab-A-008.png
+   .. figure:: images/lab-A-009.png
 
 #. Close the *Add Users and Groups* area by clicking the *X*
 
@@ -164,8 +165,8 @@ Roles can be applied to individual user accounts or to groups. As a best practic
 #. Navigate to the **Administration > Users, Roles, Access > Roles** page
 #. Click the **Administrator** role on the right of the screen
 #. Click the **Add** button
-#. Find and select the **thylab\Secret Server Administrators**’ group
-#. Click right **Add** button
+#. Find and select the **Secret Server Administrators**’ group
+#. Click the **Add** button under the users/groups
 #. Your configuration should match the image below:
 
    .. figure:: images/lab-A-010.png
@@ -231,64 +232,64 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
      - View Configuration Unlimited Administrator
 
 #. Navigate to the **Administration > User, Roles, Access > Roles** page
-#. Click the **Add** button
-#. Provide the Name **Administrator (Super User)**
-#. Click **Create Role**
+#. Click the **Administrator** role
+#. On the *General* tab click the **Edit** text
+#. Change the name to **Administrator (Super User)**
+#. Click **Save**
 #. Click the newly create role and click the **Permissions** tab
 
-.. todo:: 
-
-   UI NEEDS CHANGES AS THE ASSIGN ALL PERMISSIONS CAN NOT BE DONE NOW. MEANS ALL NEED TO BE CLICKED ONE BY ONE!!!!! STOPS HERE!!!!!!!!!!!!!!
-
+.. todo update this part as we have no assign all button. Need to be relooked at EA/GA date
 
 #. Click the **Create Role** button on the right of the screen
-#. Enter a role name of Administrator (Unlimited Admin Configure)
-#. Click the double left arrow to move all permissions from the *Permissions Unassigned* field to *Permissions Assigned*
-#. Move the following permissions back to *Permissions Unassigned* (using the single arrow pointing right and using CTRL to multiple select):
+#. Enter a role name **Administrator (Unlimited Admin Configure)**
+#. Click the *Permissions* tab and click the **Edit** text
+.. #. Click the double left arrow to move all permissions from the *Permissions Unassigned* field to *Permissions Assigned*
+.. #. Move the following permissions back to *Permissions Unassigned* (using the single arrow pointing right and using CTRL to multiple select):
+#. Select all the permission except the below list:
 
    - Access Offline Secrets on Mobile
    - Allow Access Challenge
+   - Privilege Manager Administrator
+   - Privilege Manager Helpdesk User
    - Privilege Manager MacOS Admin
+   - Privilege Manager Unix/Linux Admin
    - Privilege Manager User
    - Privilege Manager Windows Admin
    - Unlimited Administrator
    - Web Services impersonate
 
 #. Click **Save**
-#. Repeat steps 6-11 for the **Administrator (Unlimited Admin User)** where all permissions are included apart from the following:
+#. Repeat the above steps for the **Administrator (Unlimited Admin User)** where all permissions are included apart from the following:
 
    - Access Offline Secrets on Mobile
    - Administer Configuration Unlimited Admin
    - Allow Access Challenge
+   - Privilege Manager Administrator
+   - Privilege Manager Helpdesk User
    - Privilege Manager MacOS Admin
+   - Privilege Manager Unix/Linux Admin
    - Privilege Manager User
    - Privilege Manager Windows Admin
    - Web Services impersonate
 
-#. Go to **Assign Roles**
-#. Now unassign the Administrator (Super User) role from the Secret Server Administrators AD group by clicking **Edit** and the single arrow pointing right after selecting the group.
+#. Click **Save**
+#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Super User)** role
+#. Hover over the thylab.local\Secret Server Administrators group and click the **delete icon**
 
-   .. figure:: images/lab-ss-010.png
+   .. figure:: images/lab-A-011.png
 
-#. Click **Save Changes**
-#. Click the dropdown box where **Administrator (Super User)** is mentioned
-#. Select **Administrator (Unlimited Admin Configure)** role and assign **Sarah Tate**
-#. Click **Save Changes**
-#. Click the dropdown box where **Administrator (Unlimited Admin Configure)** is mentioned
-#. Select **Administrator (Unlimited Admin User)** role and assign **Tom Smith**
-#. Click **Save Changes**
-#. Click **Back** twice
+#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
+#. Click the **Add** button and add **Sarah Tate**
+#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
+#. Click the **Add** button and add **Tom Smith**
 
 Check role assignment
 ^^^^^^^^^^^^^^^^^^^^^
 
-#. To check the role assigment, click **Admin > Users**
-#. click on account names **STate** and click the **Roles** Tab. This shows the assigned role and should correspond with the steps above for Sarah Tate
+#. To check the role assigment, click **Administration > User, Roles, Access > User Management**
+#. click on account names **STate** and click the **Roles** Tab. This shows the assigned roles and should correspond with the steps above for Sarah Tate
 
-   .. figure:: images/lab-ss-011.png
-
-   .. note::
-       To see the full Role name, hoover your mouse over the name and after a few seconds the full name is given as shown in the screenshot.
+   .. figure:: images/lab-A-012.png
 
 #. Repeat the steps for Tom Smith (TSmith) and check that his roles are also correct.
 
