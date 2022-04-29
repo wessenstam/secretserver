@@ -84,7 +84,7 @@ As we have previously seen, once RPC is configured users within sufficient permi
 - The Expiration Days field on the secret template or secret itself (Once the secret has expired, remote password configuration will apply)
 - Is Remote Password Changing configured within the applied secret policy?
 
-  .. figure:: images/lab-A-006.png
+  .. figure:: images/lab-A-012.png
 
 - Is remote password changing configured on the secret itself (*Remote Password Changing* tab)?
 
