@@ -254,7 +254,7 @@ Lab 17 - Adding a custom launcher to a Secret template
    .. figure:: images/lab-A-009.png
 
 #. Click **Save**
-#. There will now be two different launchers. The below screenshot should be seen in your installation
+#. There will now be two different launchers. The below screenshot should be seen in your Secret Template
 
    .. figure:: images/lab-A-010.png
 
