@@ -245,14 +245,18 @@ Lab 17 - Adding a custom launcher to a Secret template
 #. Navigate to the **Administration (double arrows)> Actions > Secret Templates**
 #. Select the **Active Directory Account (Restricted Launch)** template
 #. Click the **Add Mapping** button
-#. Select **Notepad** as the *Mapping Type*, and then map Domain, Password, and Username to the corresponding fields in the template. These will be used if you have chosen to run the Launcher as the Secret credentials.
+#. Select **Notepad** as the *Mapping Type*
 
    .. figure:: images/lab-A-008.png
+
+#. Map Domain, Password, and Username to the corresponding fields in the template. These will be used if you have chosen to run the Launcher as the Secret credentials.
+
+   .. figure:: images/lab-A-009.png
 
 #. Click **Save**
 #. There will now be two different launchers. The below screenshot should be seen in your installation
 
-   .. figure:: images/lab-A-009.png
+   .. figure:: images/lab-A-010.png
 
 .. raw:: html
 
