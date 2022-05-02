@@ -30,7 +30,7 @@ Once found, accounts can then automatically be pulled into Secret Server. The co
 Lab 23 – Enabling Discovery
 ***************************
 
-#. Navigate to **Admin > Discovery**
+#. Navigate to **Administration > Actions > Discovery**
 #. Click **Continue**
 #. Click on **Enable Discovery**
 #. Click on **Enable Discovery** to confirm *Enable Discovery*
@@ -44,10 +44,10 @@ Now that discovery is enabled, we can start to create discovery sources to look 
 Lab 24 – Configuring Active User Account Directory Discovery
 ************************************************************
 
-#. While still at **Admin > Discovery** page, click **Create Discovery Sources**
+#. While still at **Administration > Actions > Discovery** page, click **Create Discovery Sources**
 #. Click **Active Directory**
 
-   .. figure:: images/lab-ss-001.png
+   .. figure:: images/lab-A-001.png
 
 #. Create the Discovery Source with the Following details:
 
@@ -60,26 +60,26 @@ Lab 24 – Configuring Active User Account Directory Discovery
 
 #. It should look like:
 
-   .. figure:: images/lab-ss-002.png
+   .. figure:: images/lab-A-002.png
 
 #. Click **Create**
 #. In the new screen, *Add Discovery Scanners*, make sure that under *Find Dependencies* also **Application Pool** and **COM+ Applications** are checked
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-003.png
 
 #. Click **Save** 
 #. Click **Discovery** in the top of the screen on the left hand side
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-004.png
 
 #. Click **Run Discovery Now > Run Discovery Scan**
 
    .. note:: 
        For more information on the permissions required by accounts used for discovery purposes check the following KB article: https://thycotic.force.com/support/s/article/Account-Permissions-for-Discovery?topicName=Secret+Server&topicId=0TO370000008fpDGAQ
 
-#. On the Left side, under *Discovery* you can find the lastest information on the Discovery Run. Also in the **SOURCE LAST RUN** you can see the date and time information.
+#. On the Left side, under *Discovery* you can find the latest information on the Discovery Run. Also in the **SOURCE LAST RUN** you can see the date and time information.
 
-   .. figure:: images/lab-ss-005.png
+   .. figure:: images/lab-A-006.png
 
 #. To view and explore the results, click the **Discovery Network View** button
 
