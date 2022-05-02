@@ -36,8 +36,8 @@ Lab 21 – Enabling Checkout
 
 Before enabling checkout, we will create an example secret. As with virtually all Secret security settings, checkout can be applied on individual secrets or from a Secret Policy.
 
-#. Navigate to **Secret > IT Team > IT – Server Team** folder then click the **+** Icon next the Secrets
-#. Select the Active Directory Account Template
+#. Navigate to **Secret (double arrows) > IT Team > IT – Server Team** folder then click the **+** Icon to create a new secret
+#. Select the *Active Directory Account* Template
 #. Create the secret with the following information
 
    - **Secret Name:** Checkout Example
@@ -47,19 +47,19 @@ Before enabling checkout, we will create an example secret. As with virtually al
 
 #. Your configuration should match the image below:
 
-   .. figure:: images/lab-ss-001.png
+   .. figure:: images/lab-A-001.png
 
 #. Click **Create Secret**
-#. Open the **Checkout Example** secret, as the policy is still active, click **Enter Comment**, provide comment and click **Check Out Secret**
+#. Open the **Checkout Example** secret, as the folder policy is still active, click **Enter Comment**, provide comment and click **Check Out Secret**
 #. Navigate to the **Security** tab of the Secret.
-#. Under Checkout click **Edit** then see that you are able to uncheck **Require Check Out**. Leave it *Checked*
+#. In the *CheckOut* section click **Edit** then see that you are able to uncheck **Require Check Out**. Leave it *Checked*
   
    .. note:: 
-       The reason for being able to do this, is that the created Secret Policy is set to *Default* and not *Enforced*
+       The reason for being able to do this, is that the created Secret Policy is set to *Default Only*
        
-       .. figure:: images/lab-ss-002.png
+       .. figure:: images/lab-A-002.png
 
-       The default checkout interval value can be configured from **Admin > Remote Password Changing**
+       The default checkout interval value can be configured from **Administration > Actions > Remote Password Changing**
 
 #. Click **Save**
 #. Open a new Incognito Window and navigate to \https://sspm.thylab.local/SecretServer
@@ -73,10 +73,15 @@ Before enabling checkout, we will create an example secret. As with virtually al
 #. Navigate to **Secret > IT Team > IT – Server Team** folder and try to open the **Checkout Example** secret
 #. A screen will be shown that the secret is checked out and by whom. Account *STate* has the "power" to force the Check in.
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-003.png
 
    .. note:: 
        In certain scenarios organisations may need the ability to force the check in of a Secret. To do that a user must have at least **View permission** on the secret **AND** the **Force Check In** permission in their assigned role. 
+
+#. Switch back to the Chrome session where the ss-admin account is logged in and check the secret back in by clicking on the time remaining before auto check in and click **Check In**
+
+   .. figure:: images/lab-A-004.png
+
 
 Request for Access
 ******************
@@ -98,7 +103,7 @@ Lab 22 – Enabling Request for Access
 
 Before enabling request for access, we will create an example secret. As with virtually all Secret security settings, request for access can be applied on individual secrets or from a Secret Policy.
 
-#. Navigate to **Secret > IT Team > IT – Server Team** folder then click the **+** Icon next the Secrets
+#. Navigate to **Secrets (double arrows) > IT Team > IT – Server Team** folder then click the **+** Icon to create a new secret
 #. Select the *Active Directory Account* Template
 #. Create the secret with the following information
     
@@ -109,7 +114,7 @@ Before enabling request for access, we will create an example secret. As with vi
 
 #. Your configuration should match the image below:
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-005.png
  
 #. Click **Create Secret**
 #. Navigate to the **Security** tab of the Secret
@@ -118,39 +123,38 @@ Before enabling request for access, we will create an example secret. As with vi
 #. In the *Approval Workflow* field, select **Create a basic (single level) workflow**
 #. Under *Approvers*, search for and select the **Checkout Approvers** group we created earlier.
 
-   .. figure:: images/lab-ss-005.png
+   .. figure:: images/lab-A-006.png
 
 #. Click **Save**
 #. After you have Clicked the **Save** button, you will get immediately the **Secret Access Required** screen as that is what we have defined.
 
-   .. figure:: images/lab-ss-006.png
+   .. figure:: images/lab-A-007.png
  
 #. Click **Request Access**
 #. In the *Duration* field, set to **One Hour**
 #. In the *Reason* field, specify the reason why you need access to the Secret
 #. Click **Submit Request**
-#. You should still have the Incognito Window where you logged in a s STate in the Thylab domain. If so, please log out the STate account by clicking the red circled ST in the right top corner and select **Log Out**.
+#. You should still have the Incognito Window where you logged in a s STate in the Thylab domain. If so, please log out the STate account by clicking the initials **ST** in the right top corner and select **Log Out**.
 
-   .. figure:: images/lab-ss-007.png
+   .. figure:: images/lab-A-008.png
 
-#. Navigate to \https://sspm.thylab.local/secretserver in the Incognito Window
+#. Click the **Log In** button
 #. Log in using the following
 
    - **Username:** BSaunders
    - **Password:** *Provided by Trainer*
    - **Domain:** Thylab
 
-#. Navigate to the **Home** tab
+#. Navigate to the **Dashboard**
 #. On the right of the screen you will see the pending approval request:
 
-   .. figure:: images/lab-ss-008.png
+   .. figure:: images/lab-A-009.png
 
 #. Click **Approve**
 #. Provide a reason for approval 
 #. Click **Confirm Approval**
 #. The screen wil have no more Approvals
-#. *Go back to the ss_admin user session* and you will be prompted for the **Enter Comment** as the policy is still active, click **Enter Comment**, provide comment and click **Save**
-#. You now see the secret.
+#. *Go back to the ss_admin user session* and you will be allowed access to see the secret.
 #. As the Request is valid for one hour, you will not be prompted for the Request anymore till the time expires.
 
 .. raw:: html
