@@ -40,14 +40,14 @@ Configure SSH Proxy
 
 One of the reasons why SSH/RDP Proxying is that it provides a higher level of security. The use of the proxy is more secure due to the fact that the secrets will NOT reach the endpoint. Instead the secrets are "translated" to have a temporary username/password combination that will be accepted by the endpoint. To be able to use a jumpbox and jumpbox routes, Secret Server Proxying needs to be enabled and configured. 
 
-#. Open the **SSPM** console and login into the Secret Server UI (if you have logged out)
-#. Navigate to **Admin > Proxying**
+#. Open the **Client** console and login into the Secret Server UI (if you have logged out) as ss-admin
+#. Navigate to **Administration (double arrows) > actions > Proxying**
 
-   .. figure:: images/lab-ss-005.png
+   .. figure:: images/lab-A-001.png
 
 #. On the SSH Proxy tab, the default one, click **Edit** right *Enable SSH Proxy* and check the **Enable SSH Proxy**
 
-   .. figure:: images/lab-ss-006.png
+   .. figure:: images/lab-A-002.png
 
 #. Click the *Endpoints* tab
 #. Scroll to the far right and click **Edit**
@@ -60,14 +60,13 @@ The Secret Server configuration is now ready to be used as a proxy server.
 Creation of secrets
 ^^^^^^^^^^^^^^^^^^^
 
-#. Open the **SSPM** console and login into the Secret Server UI (if you have logged out)
 #. Navigate to **Secrets > IT Team > IT - Unix Team**
 #. Click the + sign to create a new secret
 #. Use the following parameters for the creation of the secret:
 
    - Secret Template: Unix Account (SSH Key Rotation)
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-003.png
 
    - Secret Name: Jumpuser (Jumpbox)
    - Machine: centos.thylab.local
@@ -77,7 +76,7 @@ Creation of secrets
    - Private Key Passphrase: empty
    - Notes: Jumbox user SSH Key for Jumpbox Route
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-004.png
 
 #. Click **Create Secret**
 #. Click the + sign to create a new secret
@@ -97,18 +96,18 @@ Creation of secrets
 Preparation on the Linux machines
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we have the secrets we need to make small changes to the Linux machines, so we can use the Public Key as authentication. THis is import for the Jumpbbox Route defined later. As interactive session is not what we want, as that would diminish the security, we are switching to SSH Key authentication. This is the securest way to remotely connect to Linux/Unix machines.
+Now that we have the secrets we need to make small changes to the Linux machines, so we can use the Public Key as authentication. This is import for the Jumpbox Route defined later. As interactive session is not what we want, as that would diminish the security, we are switching to SSH Key authentication. This is the securest way to remotely connect to Linux/Unix machines.
 
-#. On the last secret that has been created, launch the *PuTTY launcher*
+#. On the last secret that has been created (*CentosUser*), launch the *PuTTY launcher*
 #. This will log you in using username and password. Due to the enablement of the SSH proxy, this connection will be made via the Secret Server SSH Proxy defined earlier. You can see that in the PuTTY screen that opened. There is a message **=== Welcome to the Secret Server SSH Proxy ===**
 
    .. figure:: images/lab-ss-007.png
 
 #. Type ``mkdir .ssh`` to create the directory in which the public key, as created in the secret, will be stored
 #. Type ``cd .ssh`` to move into the created directory
-#. In your Secret Server UI in the Centos secret, click **Public Key (xxx.xx B)** to download the Key
+#. In your Secret Server UI in the CentosUser secret, click **Public Key (xxx.xx B)** to download the Key
 
-   .. figure:: images/lab-ss-008.png
+   .. figure:: images/lab-A-005.png
 
 #. Open the downloaded *Public Key* with Notepad
 
@@ -124,16 +123,17 @@ Now that we have the secrets we need to make small changes to the Linux machines
 
 #. Hit the *ESC* key and type ``:wq!`` and hit *ENTER* to save the file
 #. Back at the prompt type ``chmod 400 authorized_keys`` to change the access right on the file. Now only the owner of the file can access it
+#. Run ``ls -al`` to show the rights of the file
 
    .. figure:: images/lab-ss-011.png
 
 #. Logout of the PuTTY session using *<CTRL>+D*
-#. Close Notepad and PuTTY srceens
+#. Close Notepad and PuTTY screens
 #. Open the other secret (Jumpuser(Jumpbox))
-#. Repeat the above steps, but now for the centos.thylab.local server
+#. Repeat the above steps, but now for the centos.thylab.local server using the *Jumpuser (Jumpbox)* secret
 
    - Open the PuTTY session, again via the Proxy as it has been enabled before we created the secret
-   - Create a .ssh directory
+   - Create a .ssh directory using ``mkdir .ssh``
    - ``cd`` into the .ssh directory
    - Open the Secret Server UI
    - Download and open the Public Key generated using Notepad
@@ -149,30 +149,30 @@ Prepare the Jumpbox Route
 
 Now that the secrets and the preparations have been created, we need to create the Jumpbox Route to emulate the route for the SSH connection.
 
-#. Navigate to *Admin*  hoover over See All and start typing **Jumpbox**. This will show **Jumpbox Routes**, click it
+#. Navigate to *Administrator*  click the *Search Menu* and start typing **Jumpbox**. This will show **Jumpbox Routes**, click it
 
-   .. figure:: images/lab-ss-012.png
+   .. figure:: images/lab-A-006.png
 
 #. Click **Create Jumpbox Route**
 
-   .. figure:: images/lab-ss-013.png
+   .. figure:: images/lab-A-007.png
 
 #. Name the Route **apps-unix route** use the same for the description
 
-   .. figure:: images/lab-ss-014.png
+   .. figure:: images/lab-A-008.png
 
 #. Click **Create Jumpbox Route**
 #. In the new screen, in the *Jumpbox Route Levels* section, click **Add Level**
 
-   .. figure:: images/lab-ss-015.png
+   .. figure:: images/lab-A-009.png
 
 #. For the port, as we haven't changed it, type **22**
 #. Click the **No Secret Selected** text
 
-   .. figure:: images/lab-ss-016.png
+   .. figure:: images/lab-A-010.png
 
 #. Select the Jumpuser (Jumpbox) secret (the max amount of levels can be 20 jumpboxes with each level its own port and secret)
-#. Click Save
+#. Click **Save**
 
 Bring everything together
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -181,16 +181,16 @@ Bringing all preparation together is the next step. Here the route will be added
 
 .. figure:: images/lab-ss-022.png
 
-#. Navigate to **Secrets > IT Team > IT - Unix Team**
-#. Open the **Centos** secret
+#. Navigate to **Secrets (double arrows) > IT Team > IT - Unix Team**
+#. Open the **CentosUser** secret
 #. Click the **Settings** tab
 #. In the *Jumpbox Routes* section, click **Edit**
 
-   .. figure:: images/lab-ss-017.png
+   .. figure:: images/lab-A-011.png
 
 #. In the dropdown box, select the **apps-unix route** and click **Save**
 
-   .. figure:: images/lab-ss-018.png
+   .. figure:: images/lab-A-012.png
 
 #. Click the General tab and start the *PuTTY Launcher*
 #. The putty screen will show the Proxy and the Jumpbox before it connected to the apps-unix server.
