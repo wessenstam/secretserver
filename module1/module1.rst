@@ -260,7 +260,7 @@ The Secret Server database is encrypted using a master encryption key. Each indi
 
 .. code-block:: bash
 
-    C:\inetpub\wwwroot\SecretServer\encryption.conifg
+    C:\inetpub\wwwroot\SecretServer\encryption.config
 
 In the next module we will be protecting this encryption config file as part of the security hardening of Secret Server. At this point, Delinea recommend taking a copy of this master encryption key and storing it in a physical vault for disaster recovery purposes. In a worst-case scenario it is possible to recover the Secret Server database and all secrets with a valid database backup and the master encryption key. 
 
