@@ -38,7 +38,7 @@ In the lab environment there are two CentOS servers ready to be used for this. C
 Configure SSH Proxy
 ^^^^^^^^^^^^^^^^^^^
 
-One of the reasons why SSH/RDP Proxying is that it provides a higher level of security. The use of the proxy is more secure due to the fact that the secrets will NOT reach the endpoint. Instead the secrets are "translated" to have a temporary username/password combination that will be accepted by the endpoint. To be able to use a jumpbox and jumpbox routes, Secret Server Proxying needs to be enabled and configured. 
+One of the reasons why SSH/RDP Proxying is used, is that the use of the proxy is more secure due to the fact that the secrets will NOT reach the endpoint. Instead the secrets are "translated" to have a temporary username/password combination that will be accepted by the endpoint. To be able to use a jumpbox and jumpbox routes, Secret Server Proxying must be enabled and configured. 
 
 #. Open the **Client** console and login into the Secret Server UI (if you have logged out) as ss-admin
 #. Navigate to **Administration (double arrows) > actions > Proxying**
