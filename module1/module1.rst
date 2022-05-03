@@ -191,29 +191,26 @@ In this exercise you will power on and connect to the training lab environment b
 #. Login using the credentials **thylab\\adm-training** / *Provided by the trainer*
 #. On the desktop of the SSPM machine you will see the secret server installer executable:
 
-   .. figure:: images/lab-01a.png
+   .. figure:: images/lab-A-002.png
 
 #. Run the setup file, when prompted with a windows User Account Control (UAC) dialogue click **Yes**
 #. The installer can install both Secret Server and Privilege Manager (Delinea endpoint least privilege solution). In this case we only want to install Secret Server so uncheck the Privilege Manager radio button as in the image below:
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-003.png
 
 #. Click **Next**
 #. On the SQL Server Database screen we can either install SQL server express or connect to an existing database. In the lab environment SQL Express is already installed so select **Connect to an existing SQL server** then click **Next**
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-004.png
 
 #. The installer will now perform a range of checks to ensure pre-requisites are in place. In the lab environment all requirements should be in place, click **Next**
 
-   .. figure:: images/lab-A-001.png
-
-   .. note::
-      The warning next to the HTTPS is due to a self-signed certificate and can be ignored in this lab environment. In real life installations, you want to make sure you have an official certificate 
+   .. figure:: images/lab-A-005.png
 
 #. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\\SQLEXPRESS** in the database name field, enter: **secretsserver**
 #. On the same screen we now need to configure the authentication option that will be used to connect to the database. Although we can use SQL authentication or Windows authentication here, Delinea recommend using Windows authentication. Select the **Windows Authentication using service account** radio button and click **Next**
 
-   .. figure:: images/lab-ss-006.png
+   .. figure:: images/lab-A-006.png
 
 #. On the next screen we will be asked to configure the service account that will be used to connect to the SQL database and used to run the IIS application pools. Enter the following credentials:
 
@@ -222,34 +219,37 @@ In this exercise you will power on and connect to the training lab environment b
 
 #. To ensure the credentials are correct, click **Validate Credentials**, if they are you should see the word **Success**. If not, check the credentials for any errors. Click **Next**
    
-   .. figure:: images/lab-ss-008.png
+   .. figure:: images/lab-A-007.png
 
 #. On the next screen we need to create our initial Secret Server user. At this point you can create your own user or use the following information to create the initial user:
    
-   - Username: ss_admin
-   - Display name: ss_admin
-   - Email: ss_admin@thylab.com
-   - Password: *Provided by the trainer*
-   - Confirm Password: *Provided by the trainer*
+   - **Username:** ss_admin
+   - **Display name:** ss_admin
+   - **Email:** ss_admin@thylab.com
+   - **Password:** *Provided by the trainer*
+   - **Confirm Password:** *Provided by the trainer*
 
    .. danger:: 
     If you create your own user account at this point, ensure you remember the username and password. This account (ss_admin) is used for the initial administration of Secret Server.
 
 #. Confirm you understand the importance of not loosing these credentials and click **Next**
 
-   .. figure:: images/lab-ss-010.png
+   .. figure:: images/lab-A-008.png
 
 #. On the next screen, options to configure an SMTP mail server are available. This feature will not be used during the training so click **Skip Email**
+
+   .. figure:: images/lab-A-009.png
+
 #. In the overview page, click **Next**
 #. The next screen provides a review of configured installation options and the option to modify any options if required. Click **Install**
 
-   .. figure:: images/lab-ss-012.png
+   .. figure:: images/lab-A-010.png
 
 #. The installation process may take up to 10 minutes. A great time to get something to drink...
 
 #. Once the installation is complete, you can now log in to Secret Server using the: https://sspm.thylab.local/secretserver URL.
 
-   .. figure:: images/lab-ss-013.png
+   .. figure:: images/lab-A-011.png
 
 #. click **Close**
 
