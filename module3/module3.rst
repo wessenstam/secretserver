@@ -237,14 +237,9 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 #. Change the name to **Administrator (Super User)**
 #. Click **Save**
 #. Click the newly create role and click the **Permissions** tab
-
-.. todo update this part as we have no assign all button. Need to be relooked at EA/GA date
-
 #. Click the **Create Role** button on the right of the screen
 #. Enter a role name **Administrator (Unlimited Admin Configure)**
 #. Click the *Permissions* tab and click the **Edit** text
-.. #. Click the double left arrow to move all permissions from the *Permissions Unassigned* field to *Permissions Assigned*
-.. #. Move the following permissions back to *Permissions Unassigned* (using the single arrow pointing right and using CTRL to multiple select):
 #. Select all the permission except the below list:
 
    - Access Offline Secrets on Mobile
