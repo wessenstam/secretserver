@@ -177,7 +177,7 @@ Now that the secrets and the preparations have been created, we need to create t
 Bring everything together
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Bringing all preparation together is the next step. Here the route will be added to the secret so the connection will use the jumpbox to connect the the apps-unix machine.
+Bringing all preparation together is the next step. Here is a graphical representation of the route that will be added to the secret. The connection to the apps-unix machine will use the CentOS server as a jumpbox.
 
 .. figure:: images/lab-ss-022.png
 

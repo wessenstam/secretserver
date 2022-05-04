@@ -196,7 +196,7 @@ Step Four: Choose Tasks
    .. figure:: images/lab-A-009.png
 
    .. note::
-       More detailed information on Event Pipelines can be found at https://docs.thycotic.com/ss/11.0.0/events-and-alerts/event-pipelines/index.md
+       More detailed information on Event Pipelines can be found at https://docs.delinea.com/ss/11.1.0/events-and-alerts/event-pipelines/index.md
 
 .. raw:: html
 
