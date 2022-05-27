@@ -31,10 +31,10 @@ Lab 6 - Creating a local user
 *****************************
 
 #. Ensure you are logged in to Secret Server with the account created during the installation (ss_admin / *Provided by trainer*)
-#. Navigate to the **Admin > User Management** page
+#. Navigate to the **Administration > Users,Roles, Access > User Management**
 #. On the intro page, click **Continue**
 
-   .. figure:: images/lab-ss-001.png
+   .. figure:: images/lab-A-001.png
 
 #. On the right of the page, click the **Create User** button, the **Add User** page will appear.
 #. Create a new user account using the settings below or create your own local user
@@ -47,7 +47,7 @@ Lab 6 - Creating a local user
    - **Slack:** Leave Blank
    - Leave rest of the fields default, make suer **Enabled** is enabled!
 
-   .. figure:: images/lab-ss-002.png
+   .. figure:: images/lab-A-002.png
 
 #. Click **Add User** to create the new user account. 
  
@@ -57,10 +57,10 @@ Lab 7 – Configuring Active Directory Synchronization
 In this exercise will set up synchronization between secret server and an Active Directory domain. This will allow specific users or groups users access to Secret Server using their Domain credentials. 
 
 #. Ensure you are logged in to Secret Server with the account created during the installation (ss_admin / *Provided by trainer*)
-#. Navigate to the **Admin > Directory Services**
+#. Navigate to the **Administration > Users, Roles, Access > Directory Services**
 #. On the introduction screen, click **Continue**
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-003.png
 
 #. On the right of the screen, click the **Add Domain** button
 #. From the list of available directory integrations, select **Active Directory Domain**
@@ -68,25 +68,25 @@ In this exercise will set up synchronization between secret server and an Active
    
    - Fully Qualified Domain Name: thylab.local
    - Friendly Name: Thylab
-   - Active: Ticked
-   - Use LDAPS: No
+   - Active: Checked
+   - Use LDAPS: Unchecked
 
 #. For the Synchronization Secret, we will need to create a new secret in secret server for the credentials of an account that has read access to Active Directory. Click **Create New Secret** on the right-hand side of the dialogue
 #. The new secret page should now be opened in a new tab, configure the new secret with the following information:
-#. Ensure secret template is set to Active Directory Account
+#. Ensure secret template is set to **Active Directory Account**
+#. Make sure the folder is set to **Personal Folders/ss_admin**
 #. Set Secret Name to **AD Sync**
 #. Set Domain to **Thylab**
 #. Set Username to **svc_sync**
 #. Set Password to *Provided by trainer*
 #. In the notes field, type: *Used for active directory integration and synchronization in Secret Server*
-#. Click **Create Secret**
-#. Leave **Multifactor Authentication** as None
 #. Your settings should now match the image below:
 
-   .. figure:: images/lab-ss-004.png
- 
+   .. figure:: images/lab-A-005.png
+
+#. Click **Create Secret** 
 #. Click **Validate and Save**
-#. Secret Server will check that the Domain can be contacted, you should now see the Thylab.com domain in the Active Directory Domains page. Now that the Domain has been configured, we need to identify which users or groups of users from Active Directory we want to synchronize into Secret Server.
+#. Secret Server will check that the Domain can be contacted, you should now see group names. Now that the Domain has been configured, we need to identify which users or groups of users from Active Directory we want to synchronize into Secret Server.
 #. From the drop-down list of available groups, select the following. 
 
    - Secret Server Administrators
@@ -95,7 +95,7 @@ In this exercise will set up synchronization between secret server and an Active
    - IT – Server Team
    - IT – Unix Team
 
-   .. figure:: images/lab-ss-006.png
+   .. figure:: images/lab-A-006.png
  
 #. Click the **Save** button
 #. The Synchronize Now dialogue is displayed. Keep both **Enable Directory Services** and **Enable User Synchronization** checked
@@ -104,19 +104,20 @@ In this exercise will set up synchronization between secret server and an Active
 To AD Synchronization to run on a schedule
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Navigate to **Admin > Directory Services** if you opened another page, otherwise click the **Configuration** tab.
+#. Back in **Administration > Users, Roles, Access > Directory Services**, click the **Configuration** tab.
 #. The settings will match the following:
 
-   .. figure:: images/lab-ss-007.png
+   .. figure:: images/lab-A-007.png
 
 #. Under **User Synchronization**, click **Edit**.
 #. Change the **Synchronization Interval** to run at a desired interval (default is every hour)
 #. Change the **User Account Options** to **User Status Mirrors Active Directory** (this is the most commonly used option and means that whatever state a user is in within Active Directory (Enabled/Disabled) will be replicated in Secret Server)
 
    .. note:: 
-        At this point your trainer will explain Automatic user management or visit https://docs.thycotic.com/ss/11.1.0/directory-services/active-directory/understanding-ad-automatic-user-management/index.md for more information
+        At this point your trainer will explain Automatic user management or visit https://docs.delinea.com/ss/11.1.0/directory-services/active-directory/understanding-ad-automatic-user-management/index.md for more information
  
- 
+#. Click **Save**
+
 Groups
 ------
 
@@ -127,15 +128,20 @@ Within Secret Server groups are an important organizational container for user a
 Lab 8 – Creating a local group
 ******************************
 
-#. Navigate to the **Admin > User Management > Groups** page, you should see the four groups that were synced from Active Directory plus a default local group called Everyone
+#. Navigate to the **Administration > Users, Roles, Access > User Management** and click the **Groups** tab, you should see the four groups that were synced from Active Directory plus a default local group called *Everyone*
 #. To create a new group, click the **Create Group** button on the right of the screen
 #. Set Group name to **Checkout Approvers**
 #. Ensure **Enabled** is checked and click **Create Group**
-#. Click the **Add** button
-#. Select **Barry Saunders**, **Hardeep Patel** and **Kim Morris** 
-#. Your group should now match the image below. If it is, click **Add**, this group will be used in later lab exercises
+#. Click the **Add** button on the **Members** tab
+#. Select **Barry Saunders**, **Hardeep Patel** and **Kim Morris**, click right bottom **Add** or drag and drop the names into the light ble bordered area to the left
 
-   .. figure:: images/lab-ss-008.png
+   .. figure:: images/lab-A-008.png
+
+#. Your group should now match the image below. This group will be used in later lab exercises
+
+   .. figure:: images/lab-A-009.png
+
+#. Close the *Add Users and Groups* area by clicking the *X*
 
 Roles
 -----
@@ -147,7 +153,7 @@ When users are created or synchronized into Secret Server they must be assigned 
 | In this section we will cover the default roles available in Secret Server and how to apply roles to users or groups of users. We will also introduce several scenarios where you may want to create custom roles.
 
 .. Note::
-    By default, when users are first created or synchronized into secret server, they are assigned the **user role**. This can be changed by navigating to the **Admin > Configuration** page. Under the **User Experience** section, you will find the **Default New User Role** field. You can change this to any available role. 
+    By default, when users are first created or synchronized into secret server, they are assigned the **user role**. This can be changed by navigating to the **Administration > Actions > Configuration** page. Under the **User Experience** section, you will find the **Default New User Role** field. You can change this to any available role. 
 
 Lab 9 – Applying Roles
 **********************
@@ -156,18 +162,15 @@ Roles can be applied to individual user accounts or to groups. As a best practic
 
 | We will now apply the built in Administrators role to the Secret Server Administrators group we have previously synced from Active Directory
 
-#. Navigate to the **Admin > Roles** page
-#. Click the **Assign Roles** button on the right of the screen 
-#. At this point, roles can be assigned by role (role is selected first then users added to the role) or by user or group (user or group is selected first then role added to the user or group). We will apply **By Role** 
-#. Ensure the **Administrator** role is selected in the drop-down role field
-#. Click **Edit**
-#. Find and select the **thylab\\Secret Server Administrators**’ group
-#. Click the single left arrow button to move the group into the assigned field
+#. Navigate to the **Administration > Users, Roles, Access > Roles** page
+#. Click the **Administrator** role on the right of the screen
+#. Click the **Add** button
+#. Find and select the **Secret Server Administrators**’ group
+#. Click the **Add** button under the users/groups
 #. Your configuration should match the image below:
 
-   .. figure:: images/lab-ss-009.png
+   .. figure:: images/lab-A-010.png
 
-#. Click **Save Change**
 
 Lab 10 – Creating Custom Roles
 ******************************
@@ -228,60 +231,60 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
    * - 
      - View Configuration Unlimited Administrator
 
-#. Navigate to the **Admin > Roles** page
-#. Select the **Administrator** role
-#. Scroll to the bottom of the page and click **Edit**
-#. Scroll back to the top of the page and change the Role Name field to **Administrator (Super User)**
+#. Navigate to the **Administration > User, Roles, Access > Roles** page
+#. Click the **Administrator** role
+#. On the *General* tab click the **Edit** text
+#. Change the name to **Administrator (Super User)**
 #. Click **Save**
-#. Go back to the **Admin > Roles page**
+#. Click the newly create role and click the **Permissions** tab
 #. Click the **Create Role** button on the right of the screen
-#. Enter a role name of Administrator (Unlimited Admin Configure)
-#. Click the double left arrow to move all permissions from the *Permissions Unassigned* field to *Permissions Assigned*
-#. Move the following permissions back to *Permissions Unassigned* (using the single arrow pointing right and using CTRL to multiple select):
+#. Enter a role name **Administrator (Unlimited Admin Configure)**
+#. Click the *Permissions* tab and click the **Edit** text
+#. Select all the permission except the below list:
 
    - Access Offline Secrets on Mobile
    - Allow Access Challenge
+   - Privilege Manager Administrator
+   - Privilege Manager Helpdesk User
    - Privilege Manager MacOS Admin
+   - Privilege Manager Unix/Linux Admin
    - Privilege Manager User
    - Privilege Manager Windows Admin
    - Unlimited Administrator
    - Web Services impersonate
 
 #. Click **Save**
-#. Repeat steps 6-11 for the **Administrator (Unlimited Admin User)** where all permissions are included apart from the following:
+#. Repeat the above steps for the **Administrator (Unlimited Admin User)** where all permissions are included apart from the following:
 
    - Access Offline Secrets on Mobile
    - Administer Configuration Unlimited Admin
    - Allow Access Challenge
+   - Privilege Manager Administrator
+   - Privilege Manager Helpdesk User
    - Privilege Manager MacOS Admin
+   - Privilege Manager Unix/Linux Admin
    - Privilege Manager User
    - Privilege Manager Windows Admin
    - Web Services impersonate
 
-#. Go to **Assign Roles**
-#. Now unassign the Administrator (Super User) role from the Secret Server Administrators AD group by clicking **Edit** and the single arrow pointing right after selecting the group.
+#. Click **Save**
+#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Super User)** role
+#. Hover over the thylab.local\Secret Server Administrators group and click the **delete icon**
 
-   .. figure:: images/lab-ss-010.png
+   .. figure:: images/lab-A-011.png
 
-#. Click **Save Changes**
-#. Click the dropdown box where **Administrator (Super User)** is mentioned
-#. Select **Administrator (Unlimited Admin Configure)** role and assign **Sarah Tate**
-#. Click **Save Changes**
-#. Click the dropdown box where **Administrator (Unlimited Admin Configure)** is mentioned
-#. Select **Administrator (Unlimited Admin User)** role and assign **Tom Smith**
-#. Click **Save Changes**
-#. Click **Back** twice
+#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
+#. Click the **Add** button and add **Sarah Tate**
+#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
+#. Click the **Add** button and add **Tom Smith**
 
 Check role assignment
 ^^^^^^^^^^^^^^^^^^^^^
 
-#. To check the role assigment, click **Admin > Users**
-#. click on account names **STate** and click the **Roles** Tab. This shows the assigned role and should correspond with the steps above for Sarah Tate
+#. To check the role assigment, click **Administration > User, Roles, Access > User Management**
+#. click on account names **STate** and click the **Roles** Tab. This shows the assigned roles and should correspond with the steps above for Sarah Tate
 
-   .. figure:: images/lab-ss-011.png
-
-   .. note::
-       To see the full Role name, hoover your mouse over the name and after a few seconds the full name is given as shown in the screenshot.
+   .. figure:: images/lab-A-012.png
 
 #. Repeat the steps for Tom Smith (TSmith) and check that his roles are also correct.
 

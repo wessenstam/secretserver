@@ -126,7 +126,7 @@ The Secret Server lab consists of the following machines:
      - 172.31.32.118
      - Windows server, used to test a range of Secret Server functionalities during the training course
    * - CENTOS
-     - 
+     - CENTOS
      - 172.31.32.121
      - CentOS machine, used to test a range fo Secret Server functionalities during the training course
 

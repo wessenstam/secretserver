@@ -19,7 +19,7 @@ When creating new secrets, a template is used to determine what information the 
 
 | Secret Server comes with a range of built-in secret templates. These templates can be viewed and edited by navigating to Admin>Secret Template and selecting the relevant template:
 
-.. figure:: images/lab-ss-001.png
+.. figure:: images/lab-A-001.png
 
 .. note::
     Demo: At this point your trainer will demonstrate and explain the available configuration options within a Secret Template
@@ -31,31 +31,31 @@ In this exercise we will be creating a Secret template that can be used for Acti
 
 | As, in this case the Secret Template we are creating is very similar to the existing Active Directory account template we will create a copy rather than starting from scratch.
 
-#. Navigate to the **Admin > Secret Templates** page
+#. Navigate to the **Administration > Actions > Secret Templates** page
 #. Click **Active Directory Account**
 #. Click **Duplicate**
-#. Click **Edit**
-#. In the name new secret dialogue type: Active Directory Service Account
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-002.png
+
+#. In the name new secret dialogue type: **Active Directory Service Account**
+
+   .. figure:: images/lab-A-003.png
 
 #. Click **Save**
-#. In the new template click the **Mapping** tab
+#. In the new template select the **Mapping** tab
 
-   .. figure:: images/lab-001.png
+   .. figure:: images/lab-A-004.png
 
-#. Click **Remove** next to the Launcher Name
-
-   .. figure:: images/lab-002.png
-
-#. Click **Ok** and accept the following warning prompt
+#. Click **Remove** next to the **Launcher Name**
+#. Click **OK** in the warning box
+ 
 We will now use this template to recreate the secret used Active Directory integration.
 
-#. Navigate to the **Home > Secret** screen
+#. Navigate to the **Secrets** and click the **double arrows**
 #. Select the **TSS Service Accounts** folder
-#. Click the **+** Icon next *Secrets* (highlighted in the image below):
+#. Click the **+** Icon and select **New Secret**
 
-   .. figure:: images/lab-ss-008.png
+   .. figure:: images/lab-A-005.png
 
 #. The new secret dialogue appears, select the newly created **Active Directory Service Account** template
 #. Add the following detail into the secret:
@@ -73,25 +73,24 @@ We will now use this template to recreate the secret used Active Directory integ
 
 We can now delete the first AD Sync secret from the Ss_admin personal folder
 
-#. From the home screen, expand personal folders
-#. Select **ss_admin**
+#. Open **Personal Folders > ss_admin**
 #. Check the box next to the **AD Sync** secret 
-#. Click the trashcan icon to deactivate
+#. In the messagebar that appears at the bottom, click **More Options** and select Deactivate
 
-   .. figure:: images/lab-ss-009.png
+   .. figure:: images/lab-A-006.png
 
 #. In the *Confirm Bulk Deactivate* windows click **Confirm Action**
 #. After the task completed, click **Close**
 
-   .. figure:: images/lab-ss-010.png
+   .. figure:: images/lab-A-007.png
 
 #. No secrets will be left in this folder
-#. Now navigate to **Admin > Directory Services**
+#. Now navigate to **Administration (double arrows) > Users, Roles, Access > Directory Services**
 #. Select the **thylab.com** domain 
-#. Click **Edit** next to *Active Directory*
-#. Next to **Synchronization Secret**, click Clear to remove the secret we previously deleted (AD Sync (Deleted))
+#. Click **Edit** in the *Active Directory* section
+#. Next to **Synchronization Secret**, click **Clear** to remove the secret we previously deleted (*AD Sync (Deleted)*)
 #. Click **No Secret Selected** and select the new **AD Sync** secret in the *TSS Service Accounts* folder
-#. Click **Save and Validate** to complete
+#. Click **Validate & Save** to complete
 
 
 .. raw:: html

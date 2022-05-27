@@ -52,32 +52,32 @@ The built-in remote desktop launcher allows the user to enter the hostname, full
 .. note:: 
     This lab exercise should be performed from the client lab machine (Client)
 
-#. Navigate to the **Admin > Secret Templates**
-#. Click **Active Directory Account** 
+#. Navigate to the **Administration (double arrows) > Actions > Secret Templates**
+#. Click **Active Directory Account**
+#. Click **Edit**
 #. Click **Duplicate**
-
-#. Name the new template: *Active Directory Account (Restricted Launch)* and check **Use List Field**
+#. Name the new template: *Active Directory Account (Restricted Launch)*
 #. Click **Save**
 #. Click the **Fields** tab
-#. Create a new Field by clicking the **Add Field** button and use the following parameters:
 
-   - **Name:** Allowed List
+#. Create a new Field using the **Add Field** button and use the following parameters:
+
+   - **Name:** Allowed Servers
    - **Field Slug Name:** allowed-servers (auto populated)
    - **Description:** These servers are allowed to connect to
    - **Data Type:** List (has to be list otherwise we can not select it for restriction)
-
-#. Click **Save**
+   - Click **Save**
 
 Now we can configure a modified RDP launcher for the new template
 
-
-#. Click **Mapping** tab
-#. In the *Launchers* section, click **Edit** next to *Remote Desktop*
-#. Under *Launcher Restrictions*, check **Edit** and check **Restrict User Input** this will show other options
+#. Click the **Mapping** tab
+#. In the *Launchers* section, click **Edit** next to the *Launcher Name*
+#. Leave all basic settings as they are
+#. Under *Launcher Restrictions* click **Edit**
 #. Ensure the following settings are configured:
 
-   - **Use List Field:** Checked
-   - **Restrict as:** Allowed Servers (from the dropdown box)
+   - **Restrict User Input:** Checked
+   - **Use List Fields:** Allowed Servers (from the dropdown box)
    - **Deny List:** None
    - **Include machines from dependencies:** Unchecked
 
@@ -86,14 +86,14 @@ Now we can configure a modified RDP launcher for the new template
    .. figure:: images/lab-001.png
 
    .. note::
-      This configuration means that the user will be presented with a list of endpoints to connect to that will be held in the Notes field of the secret. To test the new template and launcher we will create a secret to launch from.
+      This configuration means that the user will be presented with a list of endpoints to connect to that will be held in the Notes field of the secret. To test the new template and launcher we will create a secret to launch from in a few.
 
 Creating a List to be used by the template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To be able to use a list, dropdown as defined by the template (*Allowed Servers of the list type*), we need to create it.
 
-#. Navigate to **Admin > Lists**
+#. Navigate to **Administration (double arrows) > Actions > Lists**
 #. Click **Create List**
 #. Use the following parameters for the fields:
 
@@ -101,7 +101,9 @@ To be able to use a list, dropdown as defined by the template (*Allowed Servers 
    - **Description:** Allowed Domain Servers - Restricted RDP Launcher
 
 #. Click **Save**
-#. Click the **Add** button and select **Create Option**
+#. Click the **Add** button in the *List Options* and select **Create Option**
+
+   .. figure:: images/lab-A-001.png
 
    .. note::
       Categories can be created as well to organize the lists (select Create Category). Example; webservers - so you can make the list available using this category. For this training we are going to use the Uncategorised category
@@ -110,13 +112,13 @@ To be able to use a list, dropdown as defined by the template (*Allowed Servers 
 #. Repeat the above *DC1* step for **SSPM**
 #. Your List should look like below:
 
-   .. figure:: images/lab-ss-002.png
+   .. figure:: images/lab-A-003.png
 
 Create a secret using the new Secrets Template
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Navigate to **Home > Secrets > IT Team > IT – Server Team**
-#. Click the **+** icon next to *Secrets*, or the **+** icon in the green circle in the right top corner, to create a new secret in this folder
+#. Navigate to **Secrets (double arrows) > IT Team > IT – Server Team**
+#. Click the **+** icon in the top right corner, to create a new secret in this folder
 #. The *Create New Secret* Dialogue appears
 #. Select **Active Directory Account (Restricted Launch)** as the template
 #. Configure the secret with the following settings:
@@ -131,22 +133,22 @@ Create a secret using the new Secrets Template
 
 #. Your configuration should match the image below:
 
-   .. figure:: images/lab-ss-001.png
+   .. figure:: images/lab-A-004.png
 
 #. Click **Create Secret**
 #. To test our configuration, open the secret
-#. Because of the Secret Policy configured earlier, this secret will require checkout and comment. Provide a reason like *Training lab* and click **Check Out secret**
+#. Because of the Secret Policy configured earlier at folder level (module 4), this secret will require comment and checkout. Provide a reason like *Training lab* and click **Check Out secret**
 #. Click the **RDP Launcher**
 #. Select **DC1** from the dropdown box (you will only see *DC1* or *SSPM*) and click **Launch Now**
    
    .. note::
       If this is the first time the user has opened a Secret Server launcher they will prompted to download and install the Delinea Protocol Handler:
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-005.png
 
 #. Download and install the 64bit version
-#. Once installed, close the browser, reopen and navigate back to the secret
-#. Relaunch the same launcher
+#. Once installed, click the **Cancel** button
+#. Relaunch the RDP Launcher for the DC1
 #. Windows will now prompt the following warning message. Click **Open RDPWinBootsrapper**
 
    .. figure:: images/lab-ss-005.png
@@ -167,8 +169,8 @@ Create a secret using the new Secrets Template
 Lab 15 – Creating a Unix SSH (PuTTY) Launcher
 *********************************************
 
-#. Navigate to the **Secrets > IT Team > IT - Unix Team**
-#. Click the **+** icon next to *Secrets*, or the **+** icon in the green circle in the right top corner, to create a new secret in this folder
+#. Navigate to **Secrets (double arrows) > IT Team > IT – Unix Team**
+#. Click the **+** icon in the top right corner, to create a new secret in this folder
 #. The *Create New Secret* Dialogue appears
 #. Select **Unix Account (SSH)** 
 #. Configure the secret with the following settings:
@@ -183,9 +185,9 @@ Lab 15 – Creating a Unix SSH (PuTTY) Launcher
 #. Private Key Passphrase: **Hide**
 #. Your configuration should match the image below: 
 
-   .. figure:: images/lab-ss-009.png
+   .. figure:: images/lab-A-006.png
 
-#. Click **create Secret**
+#. Click **Create Secret**
 #. Launch the **PuTTY Launcher**
 #. Windows will now prompt the following warning message. Click **Open RDPWinBootsrapper**
 
@@ -217,8 +219,8 @@ Lab 16 – Creating a custom Launcher
 
 The first step to configuring remote password changing is to enable the feature in configuration:
 
-#. Navigate to **Admin > Secret Templates**
-#. Click **Launchers** tab at the top of the screen, and then click **Create**.
+#. Navigate to the **Administration (double arrows)> Actions > Secret Templates**
+#. Click the **Launchers** tab in the to of the screen, and then click **Create**.
 #. Select **Process** for the **Launcher Type**, and then type for the *Launcher Name* **Notepad** 
 #. Under the *WINDOWS SETTINGS*
 
@@ -231,25 +233,32 @@ The first step to configuring remote password changing is to enable the feature 
 
       | **Use Operating System Shell:** Use the OS shell for the launcher. Useful for processes requiring UAC confirmation
       
-      | More detailed information can be found at https://docs.thycotic.com/ss/11.1.0/secret-launchers/custom-launchers/creating-custom-launchers
+      | More detailed information can be found at https://docs.delinea.com/ss/11.1.0/secret-launchers/custom-launchers/creating-custom-launchers
 
-#. Click **Save**
 #. Your Launcher should look like
 
-   .. figure:: images/lab-ss-012.png
+   .. figure:: images/lab-A-007.png
 
+#. Click **Save**
 
 Lab 17 - Adding a custom launcher to a Secret template
 ******************************************************
 
-#. Navigate to **Admin > Secret Templates**
-#. Click the **Active Directory Account (Restricted Launch)** template 
-#. Click the **Mapping** tab, and then click **Add Mapping**.
-#. Select **Notepad** under the *Mapping Type > Launcher Types* section, and then map Domain, Password, and Username to the corresponding fields in the template. These will be used if you have chosen to run the Launcher as the Secret credentials.
+#. Navigate to the **Administration (double arrows)> Actions > Secret Templates**
+#. Select the **Active Directory Account (Restricted Launch)** template
+#. Click the **Add Mapping** button
+#. Select **Notepad** as the *Mapping Type*
 
-   .. figure:: images/lab-ss-013.png
+   .. figure:: images/lab-A-008.png
+
+#. Map Domain, Password, and Username to the corresponding fields in the template. These will be used if you have chosen to run the Launcher as the Secret credentials.
+
+   .. figure:: images/lab-A-009.png
 
 #. Click **Save**
+#. There will now be two different launchers. The below screenshot should be seen in your Secret Template
+
+   .. figure:: images/lab-A-010.png
 
 .. raw:: html
 

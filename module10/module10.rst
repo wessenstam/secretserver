@@ -37,9 +37,9 @@ Although the out of the box reports provide most customers with all the visibili
 Lab 25 – Configuring a Custom Report
 ************************************
 
-#. Click the **+** icon next to **Reports** in the right-hand column 
+#. Click the **+** icon in the top right-hand corner and click **New Report**
 
-   .. figure:: images/lab-ss-001.png
+   .. figure:: images/lab-A-001.png
 
 #. Configure the report with the following detail:
 
@@ -94,7 +94,7 @@ In this exercise we will configure an event subscription that will alert specifi
 .. note:: 
     The training lab does not currently contain an SMTP server so this event subscription can be configured but will not generate any email alerts.
 
-#. Navigate to the **Admin > Event Subscriptions**
+#. Navigate to the **Administration > Actions > Event Subscriptions**
 #. Click **Create Event Subscription**
 #. Create a new subscription with the following configuration.
    
@@ -106,22 +106,25 @@ In this exercise we will configure an event subscription that will alert specifi
 #. Click **Add Event**
 #. Your configuration should match the image below:
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-002.png
 
 #. Click **Create Event Subscription**
 #. In the *Creating Without Email or Slack* message, click **Yes**
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-003.png
 
 #. To test the subscription, edit a secret in the *IT – Server Team* folder by adding to the *notes* section "Test to trigger the Event Subscription". 
 #. The event will be visible in the **Notification** of the ss_admin user. Click **Inbox** in the navigation bar and select **Notification**. There you will see event.
 
-   .. figure:: images/lab-ss-005.png
+   .. figure:: images/lab-A-004.png
 
    .. note:: 
        This due to the fact that under the just created Event Subscription, under *Subscribers* the ss_admin account is mentioned (the default)
 
 #. Click on the Event Subscription line and see the details. You can see which field(s) has/have been changed in the *EventDetails* section.
+
+   .. figure:: images/lab-A-005.png
+
 #. Click **Close**
  
 Lab 27 – Configuring an Event Pipeline
@@ -134,14 +137,15 @@ In this example exercise we will send an Email to the Secret Owner on the basis 
 Step One: Create the Event Pipeline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-#. Navigate to **Admin > See all > Search "Event Pipeline"**
+#. Navigate to **Administration > Search bar type "Event Pipeline"**
+#. Click **Event Pipeline policy** in the search results
 
-   .. figure:: images/lab-ss-006.png
+   .. figure:: images/lab-A-006.png
 
 #. Click the *Pipelines* tab. Select **Add Pipeline**
 #. Select **Pipeline Type:** Secret
 #. Click **Create**
-#. The Choose Triggers page appears.
+#. The Choose Triggers page appears
 
  
 Step Two: Add Triggers
@@ -149,7 +153,7 @@ Step Two: Add Triggers
 
 #. In the *Add Secret Triggers* section, click the *+* in the green circle next to the **Expired Today** trigger.
 
-   .. figure:: images/lab-ss-007.png
+   .. figure:: images/lab-A-007.png
 
    .. note:: 
        You can also search for a trigger by typing in the search text box. The selected triggers appear in the Selected Triggers list. 
@@ -164,7 +168,7 @@ Step Three: Add Filters
 #. Use the exact same method to Select the filter to the Event Pipeline. All filters present a popup page for you to provide additional information when you click on them. 
 #. Click the *+* in the green circle next to the **Secret Name** 
 
-   .. figure:: images/lab-ss-008.png
+   .. figure:: images/lab-A-008.png
 
 #. Leave *Value Match type* as **Equals**
 #. In the *Value* box enter the name **RFA Example**
@@ -173,7 +177,8 @@ Step Three: Add Filters
 
 Step Four: Choose Tasks
 ^^^^^^^^^^^^^^^^^^^^^^^
-#. Use the exact same method to add **Send Email to Owners** task to the Event Pipeline. Many tasks present a popup page for you to provide additional information when you click on them.
+#. Use the exact same method to add **Secret: Send Email to Owners** task to the Event Pipeline. Many tasks present a popup page for you to provide additional information when you click on them.
+#. Set *Secret Access Role Permission* to **Owner**
 #. Set *Subject Pattern* to **This Secret has now Expired**
 #. Set *Email Body Pattern* to **This Secret has now Expired**
 #. Leave the *High Priority* unchecked
@@ -184,14 +189,14 @@ Step Four: Choose Tasks
 #. Click **Save**. The Choose Tasks page of the wizard appears
 #. Click **Next**
 #. In the *Pipeline Name* type **Event Pipeline for send email on expired secrets**
-#. In the *Pipieline Description*  type **Event Pipeline for send email on expired secrets**
+#. In the *Pipeline Description*  type **Event Pipeline for send email on expired secrets**
 #. Click **Save**
 #. You will be presented with the Event Pipelines: Pipelines and it is *Active*
 
-   .. figure:: images/lab-ss-009.png
+   .. figure:: images/lab-A-009.png
 
    .. note::
-       More detailed information on Event Pipelines can be found at https://docs.thycotic.com/ss/11.0.0/events-and-alerts/event-pipelines/index.md
+       More detailed information on Event Pipelines can be found at https://docs.delinea.com/ss/11.1.0/events-and-alerts/event-pipelines/index.md
 
 .. raw:: html
 

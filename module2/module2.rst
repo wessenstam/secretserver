@@ -33,13 +33,13 @@ Lab 3 - Installing Licenses
    .. note::
        The first time you open the UI, it will take some time as IIS needs to get stuff ready to be used.
 
-#. Click the **Admin** tab from the toolbar at the bottom-left of the screen then select **Licenses** 
+#. Click **Administration** from the toolbar then hoover over **Setup & System Maintenance** and select **Licenses** 
 
-   .. figure:: images/lab-ss-001.png
+   .. figure:: images/lab-A-001.png
 
 #. From the licenses page click the **Install New License** button 
 
-   .. figure:: images/lab-ss-003.png
+   .. figure:: images/lab-A-002.png
 
 #. As we will be entering multiple license keys, select Bulk Entry Mode
 #. In the license field paste the license keys provided by your Trainer, they should be in the following format
@@ -77,16 +77,16 @@ Lab 4 - Activating Secret Server Licenses
 #. From the licensing page, click the **License Activation** button
 #. Enter the default training user details as in the image below. The phone number does not need to be valid in this training environment
 
-   .. figure:: images/lab-ss-004.png
+   .. figure:: images/lab-A-003.png
 
-#. Select **Activate** to complete the license activation process.
+#. Click **Activate** to complete the license activation process.
 
    .. note::
        If the installation would be an AirGapped installation, click the Link **Need to Activate on an AirGap Network?**. The document will describe the process using a request and response method using a separate machine that can connect to the internet.
 
 #. After a few seconds the screen returns to an overview of the licenses. Clicking the **Server Activation** tab will show that the server **SSPM** is Activated.
 
-   .. figure:: images/lab-ss-005.png
+   .. figure:: images/lab-A-004.png
 
  
 Security Hardening 
@@ -98,7 +98,7 @@ Following the installation of Secret Server, it is important to make sure that e
 
 | In this section we will view the security hardening report and perform a number of tasks to increase the security of the installation. For a full guide on hardening a Secret Server installation visit: https://updates.thycotic.net/secretserver/documents/SS_SecurityHardening.pdf
 
-   .. figure:: images/lab-ss-006.png
+   .. figure:: images/lab-A-005.png
 
 Each item within the report represents a potential security concern that should be considered in any environment. For a detailed description of the issue and remediation actions, click **Explain**
 
@@ -120,7 +120,7 @@ Delinea strongly recommend that steps are taken to protect this file to prevent 
 - Protecting the encryption.config file with EFS
 - Protecting the encryption.config file with an integrated HSM
 
-In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit https://docs.thycotic.com/ss/11.1.0/security-hardening
+In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit https://docs.delinea.com/ss/11.1.0/security-hardening
 
 #. Ensure you are logged in to Secret Server with the account created during the installation (ss_admin / *Provided by trainer*)
 #. Open a file explorer window and navigate to **C:\\inetpub\\wwwroot\\SecretServer** and copy the **encryption.config** file to your desktop. 
@@ -128,7 +128,7 @@ In this exercise we will use DPAPI to protect the encryption.config file. For mo
    .. Note:: 
        In a production environment Delinea would recommend storing this in a physical vault or HSM
 
-#. Navigate to the **Admin > Configuration** page 
+#. Navigate to the **Administration** click the **>>** icon. In the search bar type **Configuration**
 #. Select the security tab and scroll down to the bottom of the page and click the **Encrypt Key Using DPAPI** button
 
    .. figure:: images/lab-ss-007.png
@@ -180,7 +180,7 @@ Rotating the master key is important in most scenarios. This feature, introduced
    .. figure:: images/lab-06a.png
 
 #. This will stop and start the IIS server.
-#. Refresh your browser after the command succeeded
+#. Refresh your browser after the command succeeded (it will take a minute)
 #. The UI wil eventually show that the Master Encryption Key Rotated is completed
 
    .. figure:: images/lab-07a.png
@@ -188,7 +188,7 @@ Rotating the master key is important in most scenarios. This feature, introduced
 #. The master-encryption-key has been rotated to new values. 
 
 .. note::
-   More detailed information can be found here https://docs.thycotic.com/ss/11.1.0/security-hardening/master-encryption-key-rotation/index.md
+   More detailed information can be found here https://docs.delinea.com/ss/11.1.0/security-hardening/master-encryption-key-rotation/index.md
 
 
 .. raw:: html
@@ -196,3 +196,4 @@ Rotating the master key is important in most scenarios. This feature, introduced
     <hr><CENTER>
     <H2 style="color:#00FF59">This concludes this module</font>
     </CENTER>
+    
