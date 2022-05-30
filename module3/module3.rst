@@ -275,7 +275,7 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 #. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
 #. Click the **Add** button and add **Sarah Tate**
-#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
+#. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin User)** role
 #. Click the **Add** button and add **Tom Smith**
 
 Check role assignment
