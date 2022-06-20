@@ -42,7 +42,7 @@ In this exercise we will be creating a Secret template that can be used for Acti
    .. figure:: images/lab-A-003.png
 
 #. Click **Save**
-#. In the new template select the **Mapping** tab
+#. In the new template select the **Mapping** tab and scroll down to Launchers
 
    .. figure:: images/lab-A-004.png
 

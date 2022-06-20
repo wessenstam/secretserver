@@ -143,7 +143,14 @@ Now that we have the secrets we need to make small changes to the Linux machines
    - Type ``chmod 400 autorized_keys`` to set the correct rights
    - Log out of the session using <CTRL>+D
 
-#. Add the jumpuser account on the centos VM by running the following commands
+#. Run the following command to make sure the jumpuser is available on the CentOS server
+
+   .. code-block:: bash
+
+      cat /etc/passwd | grep jumpuser
+
+#. If a reply is show with the word **jumpuser**, **skip the following step**.
+#. Add the jumpuser account on the centos VM, if it doesn't exist, by running the following commands
 
    .. code-block:: bash
 

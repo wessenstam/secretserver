@@ -236,11 +236,11 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 #. On the *General* tab click the **Edit** text
 #. Change the name to **Administrator (Super User)**
 #. Click **Save**
-#. Click the newly create role and click the **Permissions** tab
+#. Click the renamed role and click the **Permissions** tab
 #. Click the **Create Role** button on the right of the screen
 #. Enter a role name **Administrator (Unlimited Admin Configure)**
-#. Click the *Permissions* tab and click the **Edit** text
-#. Select all the permission except the below list:
+#. Click the *Permissions* tab and click **Add**
+#. Select all the permission using <CTRL+A> add them and then remove the permissions from the below list:
 
    - Access Offline Secrets on Mobile
    - Allow Access Challenge
@@ -253,7 +253,6 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
    - Unlimited Administrator
    - Web Services impersonate
 
-#. Click **Save**
 #. Repeat the above steps for the **Administrator (Unlimited Admin User)** where all permissions are included apart from the following:
 
    - Access Offline Secrets on Mobile
@@ -267,7 +266,6 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
    - Privilege Manager Windows Admin
    - Web Services impersonate
 
-#. Click **Save**
 #. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Super User)** role
 #. Hover over the thylab.local\Secret Server Administrators group and click the **delete icon**
 

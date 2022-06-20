@@ -182,6 +182,8 @@ The environment looks like this
 
 .. figure:: images/lab-ss-01a.png
 
+In some cases for the SSPM server a reboot is needed due to an former installation is stuck. Please reboot the SSPM server.
+
 Lab 2 – Installing Secret Server
 *****************************************
 
