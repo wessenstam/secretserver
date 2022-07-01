@@ -209,7 +209,7 @@ In this exercise you will power on and connect to the training lab environment b
 
    .. figure:: images/lab-A-005.png
 
-#. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\\SQLEXPRESS** in the database name field, enter: **secretsserver**
+#. On the next screen we need to configure the database connection. As the SQL server is installed on the same machine, in the Server name or IP field enter: **SSPM\\SQLEXPRESS** in the database name field, enter the name of the database: **secretsserver**
 
    .. note::
      For security reasons, the database has already been created and the thylab\svc_secretserver had been give the appropriate rights to create the needed tables in the database. If you are using another name for the database, an error will be risen...
