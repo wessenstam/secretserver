@@ -1,4 +1,4 @@
-# Secret Server-Training
+# SecureServer-Training
 Sources for SecureServer Training
 
 Training workshop build in a RST format for easier manipulation and online deployment.
