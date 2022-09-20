@@ -230,15 +230,17 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 05. Click **Save**
 
-06. Click the newly create role and click the **Permissions** tab
+06. Navigate back to **Administration > User, Roles, Access > Roles**
 
 07. Click the **Create Role** button on the right of the screen
 
 08. Enter a role name **Administrator (Unlimited Admin Configure)**
 
-09. Click the *Permissions* tab and click the **Edit** text
+09. Click **Create Role**
 
-10. Select all the permission except the below list:
+09. Click the *Permissions* tab and click the **Add** text
+
+10. Select all the permission, using the Select All text on the right hand side, drag them in the left hand side and remove, the below permissions:
 
     - Access Offline Secrets on Mobile
     - Allow Access Challenge

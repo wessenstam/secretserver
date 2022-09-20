@@ -48,10 +48,11 @@ plugins:
   - search
   - with-pdf:
       author: Delinea Technical Enablement
-      cover_logo: images/secretserver.jpg
+      cover_logo: img/secretserver.jpg
       cover_title: Secret Server
+      cover_subtitle: Protecting your keys to the kingdom
       copyright: Delinea
-      debug_html: true
+      debug_html: false
       enabled_if_env: ENABLE_PDF_EXPORT
 extra:
   generator: false
