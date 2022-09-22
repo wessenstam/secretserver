@@ -27,7 +27,7 @@ In this module we will be creating a basic folder structure for the IT team and 
 
     ![](images/lab-A-001.png)
 
-02. Click the **+** icon in the top right corner and click **Add Root** Folder
+02. Click the **+** icon in the top right corner and click **Add Folder**
 
     ![](images/lab-A-002.png)
 
@@ -122,17 +122,6 @@ The following table defines the settings that can be controlled within a Secret 
 |Web Launcher requires Incognito Mode|If enabled, a Web Launcher can only be used if running in Incognito Mode. This way nothing will be cached.|
 
 
- <!-- 
- You will notice that for each of the above settings, the following options are available (**Administration > Actions > Secret Policies > Add**):
-
- ![](images/lab-ss-007.png)
-
- - **Default** - Any items selected as 'Default' will be applied on the creation of any Secret that has this Secret Policy applied to it.
- - **Enforced** - Any items selected as 'Enforced' will be applied to all Secrets that have this Secret Policy applied to it.
-
- !!!Note
-     It is important to note that users with edit or owner permissions on a secret would be able to change settings if the applied policy setting is Default. Enforced settings cannot be changed on the Secret.
--->
 ### Lab 12 - Creating a Secret Policy
 
 In this exercise we will create a policy to define settings for secrets within the *IT - Server Team* folder
@@ -143,30 +132,30 @@ In this exercise we will create a policy to define settings for secrets within t
 
 3. Create the policy with the following configuration:
 
-   - **Secret Policy Name:** IT Server Team - Domain Admin Policy
-   - **Description:**  Defines secret security settings for secrets within the IT Server Team folder
-   - **Active:** Checked
+    - **Secret Policy Name:** IT Server Team - Domain Admin Policy
+    - **Description:**  Defines secret security settings for secrets within the IT Server Team folder
+    - **Active:** Checked
 
 4. Click **Save**
 
 5. Click the **Security** tab and click **Edit**
 
-   - **Require Checkout:**
-
-     - **Setting:** Yes
-     - **Default Only**: Checked
-
-   - **Custom Checkout Interval:**
-
-     - **Value:** 120
-     - **Default Only**: Checked
-
-   - **Require Comment:**
-
-     - **Setting:** Yes
-     - **Default Only**: Checked
-
-   - *Leave all other options as default*
+    - **Require Checkout:**
+    
+      - **Setting:** Yes
+      - **Default Only**: Checked
+    
+    - **Custom Checkout Interval:**
+    
+      - **Value:** 120
+      - **Default Only**: Checked
+    
+    - **Require Comment:**
+    
+      - **Setting:** Yes
+      - **Default Only**: Checked
+    
+    - *Leave all other options as default*
 
 6. Click **Save** on the next Confirm screen, it will show how many Folder(s) and or Secret(s) will be updated click **OK**. As there is nothing to be updated, this should be done instantly
 

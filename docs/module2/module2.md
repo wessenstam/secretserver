@@ -40,6 +40,9 @@ Ensure you are logged in to Secret Server with the initial account created durin
 
       ![](images/lab-ss-002.png)
 
+!!!danger
+      You may see an upgrade message at the top of the screen. Please leave the correct version installed and do **not** upgrade your installation. The installation may update some screens and settings that this lab guide is showing.
+
 ### License activation
 
 Although adding these license keys has upgraded Secret Server from standard to platinum addition, Secret Server will now be in Limited Mode. To remedy this the license keys, we have added need to be activated.
@@ -70,7 +73,7 @@ During the activation the following information is sent to Delinea:
 
 #### Lab 4 - Activating Secret Server Licenses
 
-1. From the licensing page, click the **License Activation** button
+1. From the licensing page, click the **License Activation** button)
 
 2. Enter the default training user details as in the image below. The phone number does not need to be valid in this training environment
 

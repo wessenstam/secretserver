@@ -1,6 +1,6 @@
 site_name: Secret Server
 site_url: https://workshop.thyintresources.com/secretserver/
-dev_addr: '127.0.0.1:8005'
+dev_addr: '127.0.0.1:8006'
 theme:
   name: material
   
@@ -48,10 +48,11 @@ plugins:
   - search
   - with-pdf:
       author: Delinea Technical Enablement
-      cover_logo: images/secretserver.jpg
+      cover_logo: img/secretserver.jpg
       cover_title: Secret Server
+      cover_subtitle: Protecting your keys to the kingdom
       copyright: Delinea
-      debug_html: true
+      debug_html: false
       enabled_if_env: ENABLE_PDF_EXPORT
 extra:
   generator: false
