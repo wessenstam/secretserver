@@ -39,7 +39,7 @@ As, in this case the Secret Template we are creating is very similar to the exis
 
 5. Click **Save**
 
-6. In the new template select the **Mapping** tab
+6. In the new template select the **Mapping** tab and scroll down to the *Launchers* section
 
       ![](images/lab-A-004.png)
 
@@ -78,7 +78,7 @@ We can now delete the first AD Sync secret from the Ss_admin personal folder
 
 02. Check the box next to the **AD Sync** secret
 
-03. In the messagebar that appears at the bottom, click **More Options** and select Deactivate
+03. In the message bar that appears at the bottom, click **More Options** and select Deactivate
 
       ![](images/lab-A-006.png)
 
@@ -92,7 +92,7 @@ We can now delete the first AD Sync secret from the Ss_admin personal folder
 
 07. Now navigate to **Administration (double arrows) > Users, Roles, Access > Directory Services**
 
-08. Select the **thylab.com** domain
+08. Select the **thylab.local** domain
 
 09. Click **Edit** in the *Active Directory* section
 

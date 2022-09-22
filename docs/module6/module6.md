@@ -204,8 +204,6 @@ To be able to use a list, dropdown as defined by the template (*Allowed Servers 
 
 06. Select checkbox to generate SSH key
 
-07. Private Key Passphrase: **Hide**
-
 08. Your configuration should match the image below:
 
     ![](images/lab-A-006.png)

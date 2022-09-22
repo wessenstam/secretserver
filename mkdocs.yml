@@ -1,6 +1,6 @@
 site_name: Secret Server
 site_url: https://workshop.thyintresources.com/secretserver/
-dev_addr: '127.0.0.1:8005'
+dev_addr: '127.0.0.1:8006'
 theme:
   name: material
   

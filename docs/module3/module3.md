@@ -182,7 +182,7 @@ We will now apply the built in Administrators role to the Secret Server Administ
 
 1. Navigate to the **Administration > Users, Roles, Access > Roles** page
 
-2. Click the **Administrator** role on the right of the screen
+2. Click the **Administrator** role
 
 3. Click the **Add** button
 
