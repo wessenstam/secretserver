@@ -270,17 +270,17 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 13. Click **Save**
 
-14. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Super User)** role
+14. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Super User)** role
 
 15. Hover over the thylab.localSecret Server Administrators group and click the **delete icon**
 
     ![](images/lab-A-011.png)
 
-16. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
+16. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Unlimited Admin Configure)** role
 
 17. Click the **Add** button and add **Sarah Tate**
 
-18. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrators (Unlimited Admin Configure)** role
+18. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Unlimited Admin Configure)** role
 
 19. Click the **Add** button and add **Tom Smith**
 
