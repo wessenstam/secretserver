@@ -150,7 +150,7 @@ Now that we have the secrets we need to make small changes to the Linux machines
     - In the PuTTY session, open a file called **authorized_keys** using `vi`
     - Type `i` to paste the copied content using the right click method
     - Use `<ESC> :wq! <ENTER>` to save the file
-    - Type `chmod 400 autorized_keys` to set the correct rights
+    - Type `chmod 400 authorized_keys` to set the correct rights
     - Log out of the session using \<CTRL>+D
 
 ### Prepare the Jumpbox Route
