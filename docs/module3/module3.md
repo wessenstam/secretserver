@@ -272,7 +272,7 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 14. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Super User)** role
 
-15. Hover over the thylab.localSecret Server Administrators group and click the **delete icon**
+15. Hover over the thylab.local Secret Server Administrators group and click the **delete icon**
 
     ![](images/lab-A-011.png)
 
