@@ -23,11 +23,11 @@ In this module we will be creating a basic folder structure for the IT team and 
 
 ### Lab 11 - Creating Secret Folders
 
-01. In the left hand column of the homepage, expand the **Secrets** by clicking on the double arrow button.
+01. In the left hand column of the homepage, select the **Secrets** option
 
     ![](images/lab-A-001.png)
 
-02. Click the **+** icon in the top right corner and click **Add Folder**
+02. Adding a new folder can be done via different methods. Either from the **+ folder** icon in the secrets menu. Or clicking the **+** icon in the top right corner and click **Add Folder**
 
     ![](images/lab-A-002.png)
 
@@ -39,7 +39,7 @@ In this module we will be creating a basic folder structure for the IT team and 
 
 06. Click the **Permissions** tab
 
-07. Click **Edit**
+07. Click either **Edit** or use the pull down menu and select **Add**
 
 08. Add the **Secret Server Administrators** group and give the group **View/View** permissions (default)
 
@@ -85,7 +85,7 @@ In this module we will be creating a basic folder structure for the IT team and 
 
     - **Inherit Permission**: unchecked
 
-    - Remove all but the following groups by hovering over the groupnames and clicking the Bin icon (remove) and give these groups **View/View** rights
+    - Remove all but the following groups by removing the checkbox in front of the groupnames make sure the remaining groups have **View/View** rights (make sure to leave the ss_admin user)
 
       - IT Desktop Team
       - Secret Server Administrators
@@ -128,7 +128,7 @@ In this exercise we will create a policy to define settings for secrets within t
 
 1. Navigate to **Administration > Actions > Secret Policies**
 
-2. Click **Add**
+2. Click **Create Secret Policy**
 
 3. Create the policy with the following configuration:
 
@@ -165,7 +165,7 @@ In this exercise we will create a policy to define settings for secrets within t
 
 #### Applying Policy to IT - Server team folder
 
-1. Click the **double arrow** next to *Secrets* to show the folders. Right-click **IT - Server Team** folder and select **Edit Folder**
+1. Click the **Secrets** option in the *menu* bar on the left to show the folders. Right-click **IT - Server Team** folder and select **Edit Folder**
 
 2. On the **Overview** tab click **Edit** next to the Secret Policy text
 
