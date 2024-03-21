@@ -28,7 +28,7 @@ Ensure you are logged in to Secret Server with the initial account created durin
 
 1.  Click **Administration** from the toolbar then browse to the **Setup & System Maintenance** section and select **Licenses**. Or alternatively, use the search bar to search for **Licenses**.
 
-      ![](images/lab-A-001.png)
+      ![](images/lab-A-001-v2.png)
 
 2. From the licenses page click the **Install New License** button
 

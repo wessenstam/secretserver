@@ -41,7 +41,7 @@ Before enabling checkout, we will create an example secret. As with virtually al
 
 04. Your configuration should match the image below:
 
-    ![](images/lab-A-001.png)
+    ![](images/lab-A-001-v2.png)
 
 05. Click **Create Secret**
 
@@ -114,7 +114,7 @@ Before enabling request for access, we will create an example secret. As with vi
 
 04. Your configuration should match the image below:
 
-    ![](images/lab-A-005.png)
+    ![](images/lab-A-005-v2.png)
 
 05. Click **Create Secret**
 
@@ -160,7 +160,7 @@ Before enabling request for access, we will create an example secret. As with vi
 
 21. On the right of the screen you will see the pending approval request:
 
-    ![](images/lab-A-009.png)
+    ![](images/lab-A-009-v2.png)
 
 22. Click **Approve**
 

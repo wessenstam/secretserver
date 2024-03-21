@@ -25,11 +25,11 @@ In this module we will be creating a basic folder structure for the IT team and 
 
 01. In the left hand column of the homepage, select the **Secrets** option
 
-    ![](images/lab-A-001.png)
+    ![](images/lab-A-001-v2.png)
 
 02. Adding a new folder can be done via different methods. Either from the **+ folder** icon in the secrets menu. Or clicking the **+** icon in the top right corner and click **Add Folder**
 
-    ![](images/lab-A-002.png)
+    ![](images/lab-A-002-v2.png)
 
 03. Give the new folder a name of **TSS Service Accounts**
 
@@ -43,7 +43,7 @@ In this module we will be creating a basic folder structure for the IT team and 
 
 08. Add the **Secret Server Administrators** group and give the group **View/View** permissions (default)
 
-    ![](images/lab-A-003.png)
+    ![](images/lab-A-003-v2.png)
 
 09. Click **Save**.
 
@@ -73,7 +73,7 @@ In this module we will be creating a basic folder structure for the IT team and 
 
 17. Right-Click the IT-Team Folder and click Add Sub Folder
 
-    ![](images/lab-A-004.png)
+    ![](images/lab-A-004-v2.png)
 
 18. Create a new folder with the name: **IT - Desktop Team**
 
@@ -92,7 +92,7 @@ In this module we will be creating a basic folder structure for the IT team and 
 
 22. Your permission configuration should match the image below:
 
-    ![](images/lab-A-005.png)
+    ![](images/lab-A-005-v2.png)
 
 23. Click **Save**
 
@@ -177,6 +177,6 @@ In this exercise we will create a policy to define settings for secrets within t
 
 5. Your configuration should match the image below
 
-    ![](images/lab-A-009.png)
+    ![](images/lab-A-009-v2.png)
 
 Any new secrets created in the *IT - Server Team* folder will now have these security settings applied.

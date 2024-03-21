@@ -31,7 +31,7 @@ As, in this case the Secret Template we are creating is very similar to the exis
 
 3. Click **Duplicate**
 
-      ![](images/lab-A-002.png)
+      ![](images/lab-A-002-v2.png)
 
 4. In the name new secret dialogue type: **Active Directory Service Account**
 
@@ -43,7 +43,7 @@ As, in this case the Secret Template we are creating is very similar to the exis
 
 7. Click **Remove** next to the **Launcher Name**
 
-      ![](images/lab-A-004.png)
+      ![](images/lab-A-004-v2.png)
 
 8. Click **OK** in the warning box
 
@@ -80,7 +80,7 @@ We can now delete the first AD Sync secret from the Ss_admin personal folder
 
 03. In the message bar that appears at the bottom, click **Bulk Actions** and select Deactivate
 
-      ![](images/lab-A-006.png)
+      ![](images/lab-A-006-v2.png)
 
 04. In the *Confirm Bulk Deactivate* windows click **Confirm Action**
 

@@ -55,7 +55,7 @@ In this exercise will set up synchronization between secret server and an Active
 
 02. Navigate to the **Administration > Users, Roles, Access > Directory Services**
 
-    ![](images/lab-A-003.png)
+    ![](images/lab-A-003-v2.png)
 
 03. On the introduction screen, click **Continue**
 
@@ -157,11 +157,11 @@ If Active Directory integration and synchronization have been configured, then a
 
 7. Select **Barry Saunders**, **Hardeep Patel** and **Kim Morris**, click top right  **Save**
 
-    ![](images/lab-A-008.png)
+    ![](images/lab-A-008-v2.png)
 
 8. Your group should now match the image below. This group will be used in later lab exercises
 
-    ![](images/lab-A-009.png)
+    ![](images/lab-A-009-v2.png)
 
 ## Roles
 
@@ -194,7 +194,7 @@ We will now apply the built in Administrators role to the Secret Server Administ
 
 7. Your configuration should match the image below:
 
-    ![](images/lab-A-010.png)
+    ![](images/lab-A-010-v2.png)
 
 ### Lab 10 – Creating Custom Roles
 
@@ -280,7 +280,7 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 17. Click the **Edit** button and uncheck the thylab.local Secret Server Administrators group
 
-    ![](images/lab-A-011.png)
+    ![](images/lab-A-011-v2.png)
 
 18. Click the **Save** button in the top right to confirm the change
 
@@ -298,6 +298,6 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 2. click on account names **STate** and click the **Roles** Tab. This shows the assigned roles and should correspond with the steps above for Sarah Tate
 
-    ![](images/lab-A-012.png)
+    ![](images/lab-A-012-v2.png)
 
 3. Repeat the steps for Tom Smith (TSmith) and check that his roles are also correct.
