@@ -24,9 +24,9 @@ This first module will cover:
 | 2 CPU Cores | 2 CPU Cores |
 | 4 GB RAM | 4 GB RAM |
 | 25 GB Disk Space | 50 GB Disk Space |
-| Windows Server 2008 R2 SP1 or newer | Windows Server 2008 R2 SP1 or newer |
-| IIS 7 or newer |SQL Server 2012 or newer|
-| .NET 4.5.1. or newer | |
+| Windows Server 2012 or newer | Windows Server 2012 or newer |
+| IIS 7 or newer |SQL Server 2014 - 2022|
+| .NET 4.8 or newer | |
 
 !!!Note
     SQL Express is supported but not recommended for production environments
