@@ -95,7 +95,7 @@ Request For access ensures that before a user can access a secret they must make
 There are two types of access request workflow available within Secret Server:
 
 - Basic Workflows - a list of individual users or groups are defined as approvers, any single user can approve or deny the request
-- Multi-Tier Workflows - Allow for complex multi-tier workflows (max. 15 steps) where specific approval requirements can be specified at each tier. For more information see: <https://docs.thycotic.com/ss/11.0.0/secret-workflow-templates/index.md>
+- Multi-Tier Workflows - Allow for complex multi-tier workflows (max. 15 steps) where specific approval requirements can be specified at each tier. For more information see: <https://docs.delinea.com/online-help/secret-server/workflow-templates/index.htm>
 
 #### Lab 22 - Enabling Request for Access
 

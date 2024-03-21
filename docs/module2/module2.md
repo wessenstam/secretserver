@@ -128,7 +128,7 @@ Delinea strongly recommend that steps are taken to protect this file to prevent 
 - Protecting the encryption.config file with EFS
 - Protecting the encryption.config file with an integrated HSM
 
-In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit <https://docs.delinea.com/ss/11.1.0/security-hardening>
+In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit <https://docs.delinea.com/online-help/secret-server/security-hardening/security-hardening-guide/index.htm>
 
 1. Ensure you are logged in to Secret Server with the account created during the installation (ss_admin / *Provided by trainer*)
 
@@ -201,5 +201,5 @@ Rotating the master key is important in most scenarios. This feature, introduced
 13. The master-encryption-key has been rotated to new values.
 
 !!!Note
-      More detailed information can be found here <https://docs.delinea.com/ss/11.1.0/security-hardening/master-encryption-key-rotation/index.md>
+      More detailed information can be found here <https://docs.delinea.com/online-help/secret-server/security-hardening/master-encryption-key-rotation/index.htm>
 

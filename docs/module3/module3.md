@@ -131,7 +131,7 @@ In this exercise will set up synchronization between secret server and an Active
 6. Click **Save**
 
 !!!Note
-    At this point your trainer will explain Automatic user management or visit <https://docs.delinea.com/ss/11.1.0/directory-services/active-directory/understanding-ad-automatic-user-management/index.md> for more information)
+    At this point your trainer will explain Automatic user management or visit <https://docs.delinea.com/online-help/secret-server/directory-services/active-directory/understanding-ad-automatic-user-management/index.htm> for more information)
 
 
 

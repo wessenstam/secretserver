@@ -213,4 +213,4 @@ Creating and Configuring and Event Pipeline consists of 4 basic steps – Creati
     ![](images/lab-A-009.png)
 
 !!!Note
-    More detailed information on Event Pipelines can be found at <https://docs.delinea.com/ss/11.1.0/events-and-alerts/event-pipelines/index.md>
+    More detailed information on Event Pipelines can be found at <https://docs.delinea.com/online-help/secret-server/events-and-alerts/event-pipelines/index.htm>

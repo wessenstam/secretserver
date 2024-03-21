@@ -261,7 +261,7 @@ The first step to configuring remote password changing is to enable the feature 
 
         Use the OS shell for the launcher. Useful for processes requiring UAC confirmation
 
-    More detailed information can be found at <https://docs.delinea.com/ss/11.1.0/secret-launchers/custom-launchers/creating-custom-launchers>
+    More detailed information can be found at <https://docs.delinea.com/online-help/secret-server/secret-launchers/custom-launchers/index.htm>
    
 
 5. Your Launcher should look like the following screenshot
