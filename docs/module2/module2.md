@@ -26,17 +26,17 @@ Ensure you are logged in to Secret Server with the initial account created durin
       The first time you open the UI, it will take some time as IIS needs to get stuff ready to be used.
    
 
-02. Click **Administration** from the toolbar then hoover over **Setup & System Maintenance** and select **Licenses**
+1.  Click **Administration** from the toolbar then browse to the **Setup & System Maintenance** section and select **Licenses**. Or alternatively, use the search bar to search for **Licenses**.
 
       ![](images/lab-A-001.png)
 
-3. From the licenses page click the **Install New License** button
+2. From the licenses page click the **Install New License** button
 
       ![](images/lab-A-002.png)
 
-4. As we will be entering multiple license keys, select Bulk Entry Mode
+3. As we will be entering multiple license keys, select Bulk Entry Mode
 
-5. In the license field paste the license keys provided by your Trainer, they should be in the following format
+4. In the license field paste the license keys provided by your Trainer, they should be in the following format
 
       ![](images/lab-ss-002.png)
 
