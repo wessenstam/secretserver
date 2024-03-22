@@ -26,17 +26,17 @@ Ensure you are logged in to Secret Server with the initial account created durin
       The first time you open the UI, it will take some time as IIS needs to get stuff ready to be used.
    
 
-02. Click **Administration** from the toolbar then hoover over **Setup & System Maintenance** and select **Licenses**
+1.  Click **Administration** from the toolbar then browse to the **Setup & System Maintenance** section and select **Licenses**. Or alternatively, use the search bar to search for **Licenses**.
 
-      ![](images/lab-A-001.png)
+      ![](images/lab-A-001-v2.png)
 
-3. From the licenses page click the **Install New License** button
+2. From the licenses page click the **Install New License** button
 
       ![](images/lab-A-002.png)
 
-4. As we will be entering multiple license keys, select Bulk Entry Mode
+3. As we will be entering multiple license keys, select Bulk Entry Mode
 
-5. In the license field paste the license keys provided by your Trainer, they should be in the following format
+4. In the license field paste the license keys provided by your Trainer, they should be in the following format
 
       ![](images/lab-ss-002.png)
 
@@ -128,7 +128,7 @@ Delinea strongly recommend that steps are taken to protect this file to prevent 
 - Protecting the encryption.config file with EFS
 - Protecting the encryption.config file with an integrated HSM
 
-In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit <https://docs.delinea.com/ss/11.1.0/security-hardening>
+In this exercise we will use DPAPI to protect the encryption.config file. For more information on using EFS or a HSM please visit <https://docs.delinea.com/online-help/secret-server/security-hardening/security-hardening-guide/index.htm>
 
 1. Ensure you are logged in to Secret Server with the account created during the installation (ss_admin / *Provided by trainer*)
 
@@ -201,5 +201,5 @@ Rotating the master key is important in most scenarios. This feature, introduced
 13. The master-encryption-key has been rotated to new values.
 
 !!!Note
-      More detailed information can be found here <https://docs.delinea.com/ss/11.1.0/security-hardening/master-encryption-key-rotation/index.md>
+      More detailed information can be found here <https://docs.delinea.com/online-help/secret-server/security-hardening/master-encryption-key-rotation/index.htm>
 

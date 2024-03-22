@@ -55,26 +55,26 @@ In this exercise will set up synchronization between secret server and an Active
 
 02. Navigate to the **Administration > Users, Roles, Access > Directory Services**
 
+    ![](images/lab-A-003-v2.png)
+
 03. On the introduction screen, click **Continue**
 
-    ![](images/lab-A-003.png)
+4.  On the right of the screen, click the **Add Domain** button
 
-04. On the right of the screen, click the **Add Domain** button
+5.  From the list of available directory integrations, select **Active Directory Domain**
 
-05. From the list of available directory integrations, select **Active Directory Domain**
-
-06. When the Active Directory dialogue appears enter the following information:
+6.  When the Active Directory dialogue appears enter the following information:
 
     - Fully Qualified Domain Name: thylab.local
     - Friendly Name: Thylab
     - Active: Checked
     - Use LDAPS: Unchecked
 
-07. For the Synchronization Secret, we will need to create a new secret in secret server for the credentials of an account that has read access to Active Directory. Click **Create New Secret** on the right-hand side of the dialogue
+7.  For the Synchronization Secret, we will need to create a new secret in secret server for the credentials of an account that has read access to Active Directory. Click **Create New Secret** on the right-hand side of the dialogue
 
-08. The new secret page should now be opened in a new tab, configure the new secret with the following information:
+8.  The new secret page should now be opened in a new tab, configure the new secret with the following information:
 
-09. Ensure secret template is set to **Active Directory Account**
+9.  Ensure secret template is set to **Active Directory Account**
 
 10. Make sure the folder is set to **Personal Folders/ss_admin**
 
@@ -131,7 +131,7 @@ In this exercise will set up synchronization between secret server and an Active
 6. Click **Save**
 
 !!!Note
-    At this point your trainer will explain Automatic user management or visit <https://docs.delinea.com/ss/11.1.0/directory-services/active-directory/understanding-ad-automatic-user-management/index.md> for more information)
+    At this point your trainer will explain Automatic user management or visit <https://docs.delinea.com/online-help/secret-server/directory-services/active-directory/understanding-ad-automatic-user-management/index.htm> for more information)
 
 
 
@@ -143,7 +143,7 @@ If Active Directory integration and synchronization have been configured, then a
 
 ### Lab 8 – Creating a local group
 
-1. Navigate to the **Administration > Users, Roles, Access > User Management** and click the **Groups** tab, you should see the four groups that were synced from Active Directory plus a default local group called *Everyone*
+1. Navigate to the **Administration > Users, Roles, Access > User Management** and click the **Groups** tab, you should see the four groups that were synced from Active Directory plus a default local group called *All Vault Users*
 
 2. To create a new group, click the **Create Group** button on the right of the screen
 
@@ -151,17 +151,17 @@ If Active Directory integration and synchronization have been configured, then a
 
 4. Ensure **Enabled** is checked and click **Create Group**
 
-5. Click the **Add** button on the **Members** tab
+5. Click the **Edit** button on the **Members** tab
 
-6. Select **Barry Saunders**, **Hardeep Patel** and **Kim Morris**, click right bottom **Add** or drag and drop the names into the light ble bordered area to the left
+6. Switch the **Assigned** filter to **Unassigned**
 
-    ![](images/lab-A-008.png)
+7. Select **Barry Saunders**, **Hardeep Patel** and **Kim Morris**, click top right  **Save**
 
-7. Your group should now match the image below. This group will be used in later lab exercises
+    ![](images/lab-A-008-v2.png)
 
-    ![](images/lab-A-009.png)
+8. Your group should now match the image below. This group will be used in later lab exercises
 
-8. Close the *Add Users and Groups* area by clicking the *X*
+    ![](images/lab-A-009-v2.png)
 
 ## Roles
 
@@ -184,15 +184,17 @@ We will now apply the built in Administrators role to the Secret Server Administ
 
 2. Click the **Administrator** role
 
-3. Click the **Add** button
+3. Click the **Edit** button
 
-4. Find and select the **Secret Server Administrators**’ group
+4. Switch the **Assigned** filter to **Unassigned**
 
-5. Click the **Add** button under the users/groups
+5. Find and select the **Secret Server Administrators**’ group
 
-6. Your configuration should match the image below:
+6. Click the **Save** button in the top right
 
-    ![](images/lab-A-010.png)
+7. Your configuration should match the image below:
+
+    ![](images/lab-A-010-v2.png)
 
 ### Lab 10 – Creating Custom Roles
 
@@ -238,9 +240,13 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 09. Click **Create Role**
 
-09. Click the *Permissions* tab and click the **Add** text
+09. Click the *Permissions* tab and click the **Edit** button
 
-10. Select all the permission, using the Select All text on the right hand side, drag them in the left hand side and remove, the below permissions:
+10. Switch the **Assigned** filter to **All**
+
+11. Select all the permission, using the Select All checkbox
+
+12. Next, remove the below permissions from the selection (you can use the search bar to filter the permissions):
 
     - Access Offline Secrets on Mobile
     - Allow Access Challenge
@@ -253,9 +259,9 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
     - Unlimited Administrator
     - Web Services impersonate
 
-11. Click **Save**
+13. Click **Save**
 
-12. Repeat the above steps for the **Administrator (Unlimited Admin User)** where all permissions are included apart from the following:
+14. Repeat the above steps for the **Administrator (Unlimited Admin User)** where all permissions are included apart from the following:
 
     - Access Offline Secrets on Mobile
     - Administer Configuration Unlimited Admin
@@ -268,21 +274,23 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
     - Privilege Manager Windows Admin
     - Web Services impersonate
 
-13. Click **Save**
+15. Click **Save**
 
-14. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Super User)** role
+16. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Super User)** role
 
-15. Hover over the thylab.local Secret Server Administrators group and click the **delete icon**
+17. Click the **Edit** button and uncheck the thylab.local Secret Server Administrators group
 
-    ![](images/lab-A-011.png)
+    ![](images/lab-A-011-v2.png)
 
-16. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Unlimited Admin Configure)** role
-
-17. Click the **Add** button and add **Sarah Tate**
+18. Click the **Save** button in the top right to confirm the change
 
 18. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Unlimited Admin Configure)** role
 
-19. Click the **Add** button and add **Tom Smith**
+19. Click the **Edit** button and add **Sarah Tate**
+
+20. Return to **Administration > User, Roles, Access > Roles** page and click the **Administrator (Unlimited Admin User)** role
+
+21. Click the **Edit** button and add **Tom Smith**
 
 #### Check role assignment
 
@@ -290,6 +298,6 @@ As a best practice, Delinea recommends splitting the Administrator role out to e
 
 2. click on account names **STate** and click the **Roles** Tab. This shows the assigned roles and should correspond with the steps above for Sarah Tate
 
-    ![](images/lab-A-012.png)
+    ![](images/lab-A-012-v2.png)
 
 3. Repeat the steps for Tom Smith (TSmith) and check that his roles are also correct.

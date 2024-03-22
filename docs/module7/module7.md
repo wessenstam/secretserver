@@ -15,7 +15,7 @@ As well as storing the credentials of privileged accounts, Secret Server provide
 
 #### Checking current situation
 
-1. Navigate to the **Secrets (double arrows) > IT Team > IT - Server Team**
+1. Navigate to the **Secrets > IT Team > IT - Server Team**
 
 2. Open the **Server Team - Domain Admin** secret, as the policy is still active, click **Enter Comment**, provide comment and click **Check Out Secret**
 
@@ -39,7 +39,7 @@ As well as storing the credentials of privileged accounts, Secret Server provide
 
 7. Your configuration should match the image below:
 
-      ![](images/lab-ss-001.png)
+      ![](images/lab-ss-001-v2.png)
 
 8. Click **Save**
 
@@ -69,7 +69,7 @@ Now that RPC has been enabled, all secrets will have a Change Password Now and H
 
       ![](images/lab-A-004.png)
 
-5. This bar will disappear once the password has changed. To check the new password, click on the {fa}`eye` icon next to *Password* to see the password (your password will be different)
+5. This bar will disappear once the password has changed. To check the new password, click on the `eye` icon next to *Password* to see the password (your password will be different)
 
       ![](images/lab-A-005.png)
 
