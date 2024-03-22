@@ -31,7 +31,7 @@ As, in this case the Secret Template we are creating is very similar to the exis
 
 3. Click **Duplicate**
 
-      ![](images/lab-A-002.png)
+      ![](images/lab-A-002-v2.png)
 
 4. In the name new secret dialogue type: **Active Directory Service Account**
 
@@ -41,15 +41,15 @@ As, in this case the Secret Template we are creating is very similar to the exis
 
 6. In the new template select the **Mapping** tab and scroll down to the *Launchers* section
 
-      ![](images/lab-A-004.png)
-
 7. Click **Remove** next to the **Launcher Name**
+
+      ![](images/lab-A-004-v2.png)
 
 8. Click **OK** in the warning box
 
 We will now use this template to recreate the secret used Active Directory integration.
 
-1. Navigate to the **Secrets** and click the **double arrows**
+1. Navigate to the **Secrets** option in the left navigation bar
 
 2. Select the **TSS Service Accounts** folder
 
@@ -65,7 +65,7 @@ We will now use this template to recreate the secret used Active Directory integ
    - **Domain:** thylab.local
    - **Username:** svc_sync
    - **Password:** *Provided by Trainer*
-   - **Notes:** type used for active directory integration and synchronization in Secret Server
+   - **Notes:** Used for Active Directory integration and synchronization in Secret Server
 
 6. Click **Create Secret**
 
@@ -78,9 +78,9 @@ We can now delete the first AD Sync secret from the Ss_admin personal folder
 
 02. Check the box next to the **AD Sync** secret
 
-03. In the message bar that appears at the bottom, click **More Options** and select Deactivate
+03. In the message bar that appears at the bottom, click **Bulk Actions** and select Deactivate
 
-      ![](images/lab-A-006.png)
+      ![](images/lab-A-006-v2.png)
 
 04. In the *Confirm Bulk Deactivate* windows click **Confirm Action**
 

@@ -76,7 +76,9 @@ Now that discovery is enabled, we can start to create discovery sources to look 
 
     ![](images/lab-A-006.png)
 
-11. To view and explore the results, click the **Discovery Network View** button
+11. To view and explore the results, click the **Analysis and Network view** menu's
+
+    ![](images/lab-A-007-v2.png)
 
     !!!Note
         Demo: Your trainer will now demo several options around importing secrets from Discovery and creating automated discovery rules.

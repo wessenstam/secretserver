@@ -41,7 +41,7 @@ Before enabling checkout, we will create an example secret. As with virtually al
 
 04. Your configuration should match the image below:
 
-    ![](images/lab-A-001.png)
+    ![](images/lab-A-001-v2.png)
 
 05. Click **Create Secret**
 
@@ -95,7 +95,7 @@ Request For access ensures that before a user can access a secret they must make
 There are two types of access request workflow available within Secret Server:
 
 - Basic Workflows - a list of individual users or groups are defined as approvers, any single user can approve or deny the request
-- Multi-Tier Workflows - Allow for complex multi-tier workflows (max. 15 steps) where specific approval requirements can be specified at each tier. For more information see: <https://docs.thycotic.com/ss/11.0.0/secret-workflow-templates/index.md>
+- Multi-Tier Workflows - Allow for complex multi-tier workflows (max. 15 steps) where specific approval requirements can be specified at each tier. For more information see: <https://docs.delinea.com/online-help/secret-server/workflow-templates/index.htm>
 
 #### Lab 22 - Enabling Request for Access
 
@@ -114,7 +114,7 @@ Before enabling request for access, we will create an example secret. As with vi
 
 04. Your configuration should match the image below:
 
-    ![](images/lab-A-005.png)
+    ![](images/lab-A-005-v2.png)
 
 05. Click **Create Secret**
 
@@ -160,7 +160,7 @@ Before enabling request for access, we will create an example secret. As with vi
 
 21. On the right of the screen you will see the pending approval request:
 
-    ![](images/lab-A-009.png)
+    ![](images/lab-A-009-v2.png)
 
 22. Click **Approve**
 

@@ -107,20 +107,22 @@ To be able to use a list, dropdown as defined by the template (*Allowed Servers 
 
 4. Click **Save**
 
-5. Click the **Add** button in the *List Options* and select **Create Option**
+5. Select the *List Options* menu item in the top of the screen
 
-    ![](images/lab-A-001.png)
+6. Click the **Add** button in the *List Options* and select **Create Option**
+
+    ![](images/lab-A-001-v2.png)
 
     !!!Note
         Categories can be created as well to organize the lists (select Create Category). Example; webservers - so you can make the list available using this category. For this training we are going to use the Uncategorised category
 
-6. In the **Option Name:** type *DC1* and click **Save**
+7. In the **Option Name:** type *DC1* and click **Save**
 
-7. Repeat the above *DC1* step for **SSPM**
+8. Repeat the above *DC1* step for **SSPM**
 
-8. Your List should look like below:
+9. Your List should look like below:
 
-    ![](images/lab-A-003.png)
+    ![](images/lab-A-003-v2.png)
 
 #### Create a secret using the new Secrets Template
 
@@ -137,7 +139,7 @@ To be able to use a list, dropdown as defined by the template (*Allowed Servers 
     - **Name:** Server Team - Domain Admin
     - **Domain:** Thylab
     - **Username:** adm_serverteam1
-    - **Password:** *Privided by the Trainer*
+    - **Password:** *Provided by the Trainer*
     - **Notes:** Restricted RDP Sessions
     - **Allowed Servers:** Allowed Domain Servers - Restricted RDP Launcher (from the dropdown box)
 
@@ -202,29 +204,27 @@ To be able to use a list, dropdown as defined by the template (*Allowed Servers 
     - **Password:** *Provided by Trainer*
     - **Notes:** leave blank
 
-06. Select checkbox to generate SSH key
+06.  Your configuration should match the image below:
 
-08. Your configuration should match the image below:
+        ![](images/lab-A-006-v2.png)
 
-    ![](images/lab-A-006.png)
+7.   Click **Create Secret**
 
-09. Click **Create Secret**
+8.   Launch the **PuTTY Launcher**
 
-10. Launch the **PuTTY Launcher**
-
-11. Windows will now prompt the following warning message. Click **Open RDPWinBootsrapper**
+9.   Windows will now prompt the following warning message. Click **Open RDPWinBootsrapper**
 
     ![](images/lab-ss-005.png)
 
-12. In the PuTTY window a warning will be shown. Click **Accept**
+10. In the PuTTY window a warning will be shown. Click **Accept**
 
     ![](images/lab-ss-010.png)
 
-13. You should now have the *centosuser* logged in in the PuTTY screen.
+11. You should now have the *centosuser* logged in in the PuTTY screen.
 
     ![](images/lab-ss-011.png)
 
-14. Logout of the PuTTY session using **CTRL+D**. This will close the session.
+12. Logout of the PuTTY session using **CTRL+D**. This will close the session.
 
 ## Custom Launchers
 
@@ -261,12 +261,12 @@ The first step to configuring remote password changing is to enable the feature 
 
         Use the OS shell for the launcher. Useful for processes requiring UAC confirmation
 
-    More detailed information can be found at <https://docs.delinea.com/ss/11.1.0/secret-launchers/custom-launchers/creating-custom-launchers>
+    More detailed information can be found at <https://docs.delinea.com/online-help/secret-server/secret-launchers/custom-launchers/index.htm>
    
 
-5. Your Launcher should look like
+5. Your Launcher should look like the following screenshot
 
-    ![](images/lab-A-007.png)
+    ![](images/lab-A-007-v2.png)
 
 6. Click **Save**
 

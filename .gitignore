@@ -7,3 +7,4 @@ site
 *.exe
 *.pdf
 *.docx
+.DS_Store
